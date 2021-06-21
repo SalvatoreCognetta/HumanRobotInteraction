@@ -1,0 +1,17 @@
+IMAGE
+<*,*,*,*>:  recipes/img/carbonara2.jpg
+----
+TEXT
+<*,*,it,*>: Secondo step
+<*,*,*,*>:  Step 2
+----
+TTS
+<*,*,*,*>:  Now is the turn to mix the egg with the pecorino. Meanwhile, reserve at least 1 cup of pasta water before draining. Add 2 ounces of pasta water to the guanciale fat in the pan. Be careful to not get splashed! Add the spaghetti to the fat and pasta water and toss to coat. Cook the spaghetti for 1 minute in the fat.
+----
+BUTTONS
+start
+<*,*,it,*>: Prossimo passaggio
+<*,*,*,*>:  Next step
+----
+
+

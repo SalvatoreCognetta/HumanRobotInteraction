@@ -1,0 +1,20 @@
+IMAGE
+<*, *, *, *>:  recipes/img/pepperchef.jpg
+----
+TEXT
+<*,*,it,*>: Cuciniamo insieme!
+<*,*,*,*>:  Let's cook togheter!
+----
+GESTURE
+<*,*,*,*>: animations/Stand/Gestures/Hey_1
+----
+TTS
+<*,*,it,*>: Premi il pulsante start per vedere le mie ricette!
+<*,*,*,*>:  Click the start button to look at my recipes!
+----
+BUTTONS
+start
+<*,*,it,*>: Inizia
+<*,*,*,*>:  Start
+----
+

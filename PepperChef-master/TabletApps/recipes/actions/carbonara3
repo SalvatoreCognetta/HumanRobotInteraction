@@ -1,0 +1,17 @@
+IMAGE
+<*,*,*,*>:  recipes/img/carbonara3.jpg
+----
+TEXT
+<*,*,it,*>: Terzo step
+<*,*,*,*>:  Step 3
+----
+TTS
+<*,*,*,*>: Remove the spaghetti pan from the heat and wait 1 minute. This step is crucial so that the eggs do not get scrambled from too high heat. Now, addd the egg pecorino mixture and start mixing it. Continue to mix and add some black pepper. You can add also a touch of salt if needed. Finally, add the guanciale now or during plating!
+----
+BUTTONS
+start
+<*,*,it,*>: Fine
+<*,*,*,*>:  End
+----
+
+

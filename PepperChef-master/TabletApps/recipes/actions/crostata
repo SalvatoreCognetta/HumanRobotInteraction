@@ -1,0 +1,18 @@
+IMAGE
+<*,*,*,*>:  recipes/img/crostata.jpg
+----
+TEXT
+<*,*,it,*>: Prepariamolo insieme!
+<*,*,*,*>:  Let's prepare it!
+----
+TTS
+<*,*,it,*>: La crostata! Un piatto italiano e delizioso! 
+<*,*,*,*>:  Crostata! An amazing italian jam tart! For this recipe you need: 3 1/2 cups all purpose flour, 1 cup sugar, 2 tsp baking powder, 2 eggs, 2 egg yolks, 1 1/4 cup butter, zest of one lemon, 1 1/4 cup strawberry jam.
+----
+BUTTONS
+start
+<*,*,it,*>: Primo passaggio
+<*,*,*,*>:  First step
+----
+
+

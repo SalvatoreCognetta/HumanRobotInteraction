@@ -1,0 +1,17 @@
+IMAGE
+<*,*,*,*>:  recipes/img/juice1.jpg
+----
+TEXT
+<*,*,it,*>: Primo step
+<*,*,*,*>:  Step 1
+----
+TTS
+<*,*,*,*>:  Cut the oranges in half with a sharp knife. Using the juicer twist the flesh of the oranges on the reamer to extract the juice and pulp.
+----
+BUTTONS
+start
+<*,*,it,*>: Prossimo passaggio
+<*,*,*,*>:  Next step
+----
+
+

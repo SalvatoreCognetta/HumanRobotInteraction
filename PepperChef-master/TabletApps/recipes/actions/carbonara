@@ -1,0 +1,18 @@
+IMAGE
+<*,*,*,*>:  recipes/img/carbonara.jpg
+----
+TEXT
+<*,*,it,*>: Prepariamolo insieme!
+<*,*,*,*>:  Let's prepare it!
+----
+TTS
+<*,*,it,*>: Hey, hai scelto una delle mie ricette preferite! La carbonara!
+<*,*,*,*>:  Hey, you have chosen one of my favorite recipes! Carbonara! To prepare this tasty pasta you need: 1 pound spaghetti, 6 ounces guanciale, 4 eggs, 1 cup pecorino, 1 cup pasta water, black pepper, salt.
+----
+BUTTONS
+start
+<*,*,it,*>: Primo passaggio
+<*,*,*,*>:  First step
+----
+
+

@@ -1,0 +1,17 @@
+IMAGE
+<*,*,*,*>:  recipes/img/crostata3.jpg
+----
+TEXT
+<*,*,it,*>: Terzo step
+<*,*,*,*>:  Step 3
+----
+TTS
+<*,*,*,*>: Roll the dough on to the rolling pin, and transfer it to a tart pan. Now, top dough with jam and spread it out evenly. Cut strips from remaining dough, and make a lattice pattern on the crostata. Bake crostata in the oven for about 30 minutes, or until dough is golden. Remove from oven, let crostata cool completely (a few hours), slice and serve!
+----
+BUTTONS
+start
+<*,*,it,*>: Fine
+<*,*,*,*>:  End
+----
+
+

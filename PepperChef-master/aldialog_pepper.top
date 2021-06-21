@@ -1,0 +1,65 @@
+topic: ~pepper_topic()
+language: enu
+
+include: lexicon_enu.top
+
+concept:(ingredients) [oranges eggs guanciale pasta flour]
+
+concept:(exp1) [newbie novice rookie beginner flour]
+
+concept:(exp2) [talented skilled intermediate skillful seasoned]
+
+concept:(exp3) [proficient experienced advanced senior expert]
+
+u:(_~hello {Pepper}) Hi human!
+
+u:([Bye Goodbye] {Pepper}) Bye bye! Have a nice day
+
+u:(I _~want_to cook {something}) Sure! ^goto(experience)
+
+u:(I _~want_to evaluate you) I hope your experience was nice!
+
+u:(_~i_dont_want_to {evaluate you}) Alright, it's ok!
+
+u:(What's your name?) My name is PepperChef ^goto(whatsname)
+
+u:(How old are you?): I am five years old! ^goto(howoldareyou)
+
+u:(How are you ?): Im fine thank you! ^goto(howareyou)
+
+u:([e:FrontTactilTouched e:MiddleTactilTouched e:RearTactilTouched]) Do you need any help ?
+
+u:(I have few _~ingredients) No problem! I'm adding $1 to your shopping list
+
+u:(["Thanks" "Thank you"] {Pepper}) You're welcome!
+
+u:({"can you"} repeat {"the last step"} {please}) Sure. I will repeat the last step.
+
+proposal: %wantevaluate Do you want to evaluate me ?
+	  u1:(_~yes) Yes! Take a look at the tablet
+	  u1:(_~no) Okay, No problems
+	  u1:(can you repeat {please}) Ok I'll repeat. ^sameProposal
+
+proposal: %experience What is your cooking experience? 
+	  u1:(_~i_am [a an] _~exp1) Okay, I suggest you to start with an orange juice! ^goto(wanttocook)
+	  u1:(_~i_am [a an] _~exp2) Well, I suggest you to prepare a tasty carbonara! ^goto(wanttocook)
+	  u1:(_~i_am [a an] _~exp3) Wow, you should definitely prepare an Italian crostata! ^goto(wanttocook)
+	  u1:(can you repeat {please}) Ok I'll repeat. ^sameProposal
+
+proposal: %wanttocook Are you ready ? 
+	  u1:(_~yes) Allright let's begin!
+	  u1:(_~no) Okay how can I help you ?
+	  u1:(can you repeat {please}) Ok I'll repeat. ^sameProposal
+
+proposal: %howareyou What about you ?
+	  u1: ([_~im_ok _~im_good]) I'm happy for you!
+	  u1: ([_~i_dont_feel_good _~im_sick]) I'm sad for you! I hope you will get better soon
+	  u1:(can you repeat {please}) Ok I'll repeat. ^sameProposal
+
+proposal: %howoldareyou How old are you human ?
+	  u1:(_~i_am _* years old) Nice to know
+	  u1:(_~i_dont_want_to tell {you}) ^rand~insult_astro
+	  u1:(can you repeat {please}) Ok I'll repeat. ^sameProposal
+
+proposal: %whatsname What's yours?
+	  u1:(_~myname _*) Nice to meet you $2 !

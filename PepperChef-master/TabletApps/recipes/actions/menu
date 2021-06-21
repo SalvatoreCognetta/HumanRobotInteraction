@@ -1,0 +1,23 @@
+IMAGE
+<*,*,*,*>:  recipes/img/recipes.jpg
+----
+TEXT
+<*,*,it,*>: Scegli qualcosa da cucinare con me!
+<*,*,*,*>:  Choose something to cook with me!
+----
+TTS
+<*,*,it,*>: Scegli qualcosa da cucinare con me!
+<*,*,*,*>:  Choose something to cook with me!
+----
+BUTTONS
+juice
+<*,*,it,*>: Spremuta di arance
+<*,*,*,*>:  Orange juice
+carbonara
+<*,*,it,*>: Carbonara
+<*,*,*,*>:  Carbonara
+crostata
+<*,*,it,*>: Crostata
+<*,*,*,*>:  Crostata
+----
+

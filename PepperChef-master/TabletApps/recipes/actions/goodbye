@@ -1,0 +1,12 @@
+IMAGE
+<*,*,*,*>:  recipes/img/pepperchef.jpg
+----
+TEXT
+<*,*,it,*>: È stato divertente! Buon Appetito!
+<*,*,*,*>:  It was fun! Enjoy your meal!
+----
+TTS
+<*,*,it,*>: È stato divertente! Buon Appetito! Fammi sapere se vuoi lasciare una valutazione
+<*,*,*,*>:  It was fun! Enjoy your meal! Let me know if you want to leave an evaluation
+----
+
