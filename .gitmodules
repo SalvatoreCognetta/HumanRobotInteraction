@@ -1,0 +1,3 @@
+[submodule "hri_software"]
+	path = hri_software
+	url = https://bitbucket.org/iocchi/hri_software.git
