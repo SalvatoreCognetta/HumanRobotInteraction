@@ -5,15 +5,16 @@ Project for HRI course.
 ## Run the docker image
 Open a terminal
 ```bash
+# Make sure ctc-linux-...zip, etc are in ./hri_software/docker/downloads
 cd ./hri_software/docker
 ./build.bash # build the latest version
 ./run.bash
-docker exex -it pepperhri tmux
+docker exec -it pepperhri tmux
 
 ```
 
 ## Run NAOqi - inside docker image
-In another terminal
+Inside the docker terminal
 ```bash
 cd /opt/Aldebaran/naoqi-sdk-2.5.5.5-linux64
 ./naoqi
@@ -23,11 +24,22 @@ cd /opt/Aldebaran/naoqi-sdk-2.5.5.5-linux64
 Open Android Studio with pepper sdk installed  
 - Tools > Pepper SDK > Emulator > OK
 
-## Run scripts inside naoqi simulator
+## Run scripts in the naoqi simulator
 Inside the docker terminal press Ctrl+b, c (this creates a new terminal inside docker via tmux)
 
 ```bash
-export PEPPER_IP=127.0.0.1
+export PEPPER_IP=127.0.0.1 #simulation mode
 cd ~/playground
 python file.py
 ```
+
+# Install modim
+
+## Install tornado dependency
+```bash
+wget  https://bootstrap.pypa.io/pip/2.7/get-pip.py
+sudo python2 get-pip.py
+pip2 install tornado
+```
+
+Follow the doc in [README](./modim/README.md)

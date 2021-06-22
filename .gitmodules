@@ -1,3 +1,6 @@
 [submodule "hri_software"]
 	path = hri_software
 	url = https://bitbucket.org/iocchi/hri_software.git
+[submodule "modim"]
+	path = modim
+	url = https://bitbucket.org/mtlazaro/modim.git
