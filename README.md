@@ -42,4 +42,35 @@ sudo python2 get-pip.py
 pip2 install tornado
 ```
 
-Follow the doc in [README](./modim/README.md)
+# Run nginx web server
+Inside a new terminal run the docker image for nginx:
+
+```bash
+export MODIM_HOME=/path/to/modim # local path to modim
+
+# Run the web server
+cd $MODIM_HOME/docker
+./run_nginx.bash
+```
+
+To check if the web server is running open a browser at URL http://<IP_address>/<demo_folder> (IP_address can be localhost or 127.0.0.1 for the robot)
+
+# Run MODIM web server
+Copy the modim folder inside the playground (/home/playground) folder.
+
+Inside the docker terminal press Ctrl+b, c (this creates a new terminal inside docker via tmux):
+
+```bash
+export MODIM_HOME=/home/robot/playground/modim # docker path to modim
+cd $MODIM_HOME/src/GUI
+python ws_server.py -robot pepper
+```
+
+# Run script for modim
+Inside the docker terminal press Ctrl+b, c (this creates a new terminal inside docker via tmux):
+
+```bash
+cd /home/robot/playground/html/sample/scripts
+python demo1.py
+```
+
