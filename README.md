@@ -52,6 +52,10 @@ export MODIM_HOME=/path/to/modim # local path to modim
 cd $MODIM_HOME/docker
 ./run_nginx.bash
 ```
+sometimes the build fails due to other processes listening on localhost port 80, then to stop them execute:
+```
+sudo lsof -t -i tcp:80 -s tcp:listen | sudo xargs kill
+```
 
 To check if the web server is running open a browser at URL http://<IP_address>/<demo_folder> (IP_address can be localhost or 127.0.0.1 for the robot)
 
