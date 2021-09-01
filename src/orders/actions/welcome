@@ -1,0 +1,19 @@
+IMAGE
+<*, *, *, *>:  orders/img/pepperwaiter.jpg
+----
+TEXT
+<*,*,it,*>: Ordina il tuo pasto!
+<*,*,*,*>:  Order your meal!
+----
+GESTURE
+<*,*,*,*>: animations/Stand/Gestures/Hey_1
+----
+TTS
+<*,*,it,*>: Premi il pulsante start per vedere i piatti nel menu!
+<*,*,*,*>:  Click the start button to look at dishes in the menu!
+----
+BUTTONS
+start
+<*,*,it,*>: Inizia
+<*,*,*,*>:  Start
+----
