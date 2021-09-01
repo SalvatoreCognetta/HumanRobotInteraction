@@ -1,0 +1,22 @@
+IMAGE
+<*, *, *, *>:  checkout/img/pepperwaiter.jpg
+----
+TEXT
+<*,*,it,*>: Eccoci al conto!
+<*,*,*,*>:  Here we are at the bill!
+----
+GESTURE
+<*,*,*,*>: animations/Stand/Gestures/Hey_1
+----
+TTS
+<*,*,it,*>: Premi il pulsante 'Visiona il conto' per visionare maggiori dettagli oppure vai al pagamento diretto con 'Paga il conto'!
+<*,*,*,*>:  Press the 'View the bill' button to view more details or go to direct payment with 'Pay  the bill'!
+----
+BUTTONS
+view
+<*,*,it,*>: Visiona il conto
+<*,*,*,*>:  View the bill
+pay
+<*,*,it,*>: Paga il conto
+<*,*,*,*>:  Pay the bill
+----

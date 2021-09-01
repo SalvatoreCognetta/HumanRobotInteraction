@@ -1,0 +1,22 @@
+IMAGE
+<*, *, *, *>:  checkout/img/pepperwaiter.jpg
+----
+TEXT
+<*,*,it,*>: Ecco qui, il tuo conto ammonta a #!
+<*,*,*,*>:  Here it is, your bill amounts to #!
+----
+GESTURE
+<*,*,*,*>: animations/Stand/Gestures/Hey_1
+----
+TTS
+<*,*,it,*>: Scegli tra i due metodi di pagamento!
+<*,*,*,*>:  Select the payment method!
+----
+BUTTONS
+view
+<*,*,it,*>: Paga in contanti
+<*,*,*,*>:  Cash Payment
+pay
+<*,*,it,*>: Paga con carta
+<*,*,*,*>:  Payment Card
+----

@@ -1,0 +1,22 @@
+IMAGE
+<*, *, *, *>:  checkout/img/pepperwaiter.jpg
+----
+TEXT
+<*,*,it,*>: Qui vedrai ciò che hai ordinato!
+<*,*,*,*>:  Here you will see what you have ordered!
+----
+GESTURE
+<*,*,*,*>: animations/Stand/Gestures/Hey_1
+----
+TTS
+<*,*,it,*>: Premi il pulsante per scorrere tra le cose che hai ordinato!
+<*,*,*,*>:  Press the button to scroll through the things you ordered!
+----
+BUTTONS
+forward
+<*,*,it,*>: Avanti
+<*,*,*,*>:  Go on
+backward
+<*,*,it,*>: Indietro
+<*,*,*,*>:  Go back
+----
