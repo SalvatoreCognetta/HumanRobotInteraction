@@ -70,6 +70,7 @@ python ws_server.py -robot pepper
 Inside the docker terminal press Ctrl+b, c (this creates a new terminal inside docker via tmux):
 
 ```bash
+export MODIM_HOME=/home/robot/playground/modim
 cd /home/robot/playground/html/sample/scripts
 python demo1.py
 ```
