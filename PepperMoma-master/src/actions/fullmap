@@ -1,0 +1,33 @@
+IMAGE
+<*,*,*,*>:  img/Map_moma.jpg
+----
+TEXT_title
+<*,*,*,*>:  Full map of the Museum
+----
+ASR
+<*,*,*,*>:  {'1': ['the first','one','1','la bohemienne endormie','the sleeping gipsy'], '2': ['the second','two','2','portrait of joseph roulin'], '3': ['the third','three','3','pines and rocks'], '4': ['the forth','four','4','the starry night'], '5': ['the fifth','five','5','evening'], '6': ['the sixth','six','6','untitled by kippenberg'], '7': ['the seventh','seven','7','untitled by haring'], '8': ['the eighth','eight','8','head'], 'goodbye':['exit','bye','bye bye','goodbye','quit','end']}
+----
+GESTURE
+<*,*,*,*>:  animations/Stand/BodyTalk/BodyTalk_1
+----
+BUTTONS
+1
+<*,*,*,*>:  1
+2
+<*,*,*,*>:  2
+3
+<*,*,*,*>:  3
+4
+<*,*,*,*>:  4
+5
+<*,*,*,*>:  5
+6
+<*,*,*,*>:  6
+7
+<*,*,*,*>:  7
+8
+<*,*,*,*>:  8
+goodbye
+<*,*,*,*>:  Exit
+----
+

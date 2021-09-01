@@ -1,0 +1,25 @@
+TEXT_title
+<*,*,*,*>: Portrait of Joseph Roulin, Vincent van Gogh, 1889
+----
+IMAGE
+<*,*,*,*>: img/2.jpg
+----
+TEXT
+<*,*,*,*>: &nbsp
+----
+ASR
+<*,*,*,*>: {'M2': ['yes','directions','take me there'], 'fullmap': ['no','back','go back','map']}
+----
+GESTURE
+<*,*,*,*>: animations/Stand/Gestures/Explain_2
+----
+TTS
+<*,*,*,*>: This portrait of Joseph Roulin is one of six that van Gogh painted of his close friend, a postal employee in the southern French town of Arles. In 1888, van Gogh moved to Arles, a fifteen-hour train ride from Paris, in the hopes of creating an artist cooperative. The plan never came to fruition, and the artist found himself lonely and isolated—a situation exacerbated by his inability to speak the challenging local Provençal dialect. Van Gogh found comfort and companionship with the Roulin family, and they became the subjects of many of his most important paintings. Do you want to know how to get there?
+----
+BUTTONS
+M2
+<*,*,*,*>: Directions
+fullmap
+<*,*,*,*>: Go Back
+----
+

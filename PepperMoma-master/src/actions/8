@@ -1,0 +1,25 @@
+TEXT_title
+<*,*,*,*>: Head, Sophie Taeuber-Arp, 1920
+----
+IMAGE
+<*,*,*,*>: img/8.jpg
+----
+TEXT
+<*,*,*,*>: &nbsp
+----
+ASR
+<*,*,*,*>: {'M8': ['yes','directions','take me there'], 'fullmap': ['no','back','go back','map']}
+----
+GESTURE
+<*,*,*,*>: animations/Stand/Gestures/Explain_8
+----
+TTS
+<*,*,*,*>: Head combines mechanically produced turned-wood pieces and beaded ornaments typically associated with domestic handicrafts to create a sculpture that challenges the boundaries separating craft from fine art. Taeuber-Arp made this sculpture in Zurich, where she had become associated with Dada, a cultural movement that embraced absurdity and abstraction as avenues to a radical rethinking of contemporary social, political, and aesthetic conventions. Do you want to know how to get there?
+----
+BUTTONS
+M8
+<*,*,*,*>: Directions
+fullmap
+<*,*,*,*>: Go Back
+----
+

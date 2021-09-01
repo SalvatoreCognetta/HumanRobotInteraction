@@ -1,0 +1,20 @@
+# Docker file for nginx server
+
+ARG DEBIAN_FRONTEND=noninteractive
+
+FROM marrtino-pepper-hri:0.4
+
+# Web server
+
+USER root
+
+RUN apt update && \
+    apt install -y bash-completion nginx
+
+### /etc/init.d/dbus start
+EXPOSE 80
+EXPOSE 443
+EXPOSE 9080
+
+ENTRYPOINT ["/usr/sbin/nginx", "-g", "daemon off;"]
+

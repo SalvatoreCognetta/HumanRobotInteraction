@@ -1,0 +1,25 @@
+TEXT_title
+<*,*,*,*>: Pines and Rocks, Paul Cézanne, 1897
+----
+IMAGE
+<*,*,*,*>: img/3.jpg
+----
+TEXT
+<*,*,*,*>: &nbsp
+----
+ASR
+<*,*,*,*>: {'M3': ['yes','directions','take me there'], 'fullmap': ['no','back','go back','map']}
+----
+GESTURE
+<*,*,*,*>: animations/Stand/Gestures/Explain_3
+----
+TTS
+<*,*,*,*>: Unlike the expansive vistas often seen in landscape paintings, Cézanne's Pines and Rocks is a tightly framed, compressed view of nature. Low bushes and massive boulders form a bulwark against the forest, and a vertical line of pine trees extends upward, obscuring the view of the sky beyond. Through the trees and rocks firmly structure the scene, Cézanne also infused Pines and Rocks with a sense of airiness and movement. Glimpses of bare, unfinished canvas peek through the dense weave of brushstrokes. These varied marks coalesce into a shimmering effect that Cézanne called "vibrations of light. Do you want to know how to get there?
+----
+BUTTONS
+M3
+<*,*,*,*>: Directions
+fullmap
+<*,*,*,*>: Go Back
+----
+

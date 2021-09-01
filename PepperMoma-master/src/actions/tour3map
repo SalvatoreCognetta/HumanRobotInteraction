@@ -1,0 +1,12 @@
+IMAGE
+<*, *, *, *>:  img/M5.jpg
+----
+TEXT_title
+<*, *, *, *>:  Tour
+----
+TEXT
+<*,*,*,*>: This is how to get Untitled from the series Lieber Maler.
+----
+TTS
+<*,*,*,*>: This is how to get Untitled from the series Lieber Maler.
+----

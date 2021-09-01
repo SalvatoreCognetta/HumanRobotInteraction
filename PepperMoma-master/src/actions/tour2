@@ -1,0 +1,15 @@
+IMAGE
+<*, *, *, *>:  img/1.jpg
+----
+TEXT_title
+<*, *, *, *>:  Tour
+----
+TEXT
+<*,*,*,*>: The Sleeping Gipsy
+----
+GESTURE
+<*,*,*,*>: animations/Stand/Gestures/Explain_4
+----
+TTS
+<*,*,*,*>: Rousseau described the subject of The Sleeping Gypsy as: "A wandering Negress, a mandolin player, lies with her jar beside her (a vase with drinking water), overcome by fatigue in a deep sleep. A lion chances to pass by, picks up her scent yet does not devour her. There is a moonlight effect, very poetic." A toll collector for the city of Paris, Rousseau was largely a self-taught painter. His sharp colors, fantastic imagery, and precise outlines struck a chord with a younger generation of avant-garde painters, including Pablo Picasso.
+----

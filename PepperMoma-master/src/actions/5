@@ -1,0 +1,25 @@
+TEXT_title
+<*,*,*,*>: Evening, Honfleur Georges Seurat, 1886
+----
+IMAGE
+<*,*,*,*>: img/5.jpg
+----
+TEXT
+<*,*,*,*>: &nbsp
+----
+ASR
+<*,*,*,*>: {'M5': ['yes','directions','take me there'], 'fullmap': ['no','back','go back','map']}
+----
+GESTURE
+<*,*,*,*>: animations/Stand/Gestures/Explain_5
+----
+TTS
+<*,*,*,*>: Seurat's evening scene is hushed and still. Vast sky and tranquil sea bring a sense of spacious light to the picture, yet also have a peculiar visual density. Long lines of cloud echo the breakwaters on the beach—signs of human life and order.Seurat had used his readings of optical theory to develop a systematic technique, known as pointillism, that involved the creation of form out of small dots of pure color. In the viewer's eye, these dots can both coalesce into shapes and remain separate particles, generating a magical shimmer.  Do you want to know how to get there?
+----
+BUTTONS
+M5
+<*,*,*,*>: Directions
+fullmap
+<*,*,*,*>: Go Back
+----
+

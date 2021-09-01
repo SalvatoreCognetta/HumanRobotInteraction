@@ -1,0 +1,25 @@
+IMAGE
+<*, *, *, *>:  img/Map_moma.jpg
+----
+TEXT_title
+<*, *, *, *>:  Full map of the Museum
+----
+TEXT
+<*,*,*,*>: What you prefer?
+----
+ASR
+<*,*,*,*>: {'fullmap': ['single artwork','artwork','single','one specific','one in particular'], 'tour': ['tour','yes','take a tour']}
+----
+GESTURE
+<*,*,*,*>: animations/Stand/BodyTalk/BodyTalk_2
+----
+TTS
+<*,*,*,*>: Let me show you the map. Do you want to take a tour on the main artworks, or is there anything you want to see in particular?
+----
+BUTTONS
+fullmap
+<*,*,*,*>: Single artwork
+tour
+<*,*,*,*>: Tour
+----
+
