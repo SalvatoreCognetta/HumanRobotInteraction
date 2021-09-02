@@ -1,4 +1,4 @@
-import sys, os, time, csv
+import sys, os, time
 
 try:
     sys.path.insert(0, os.getenv('MODIM_HOME')+'/src/GUI')
@@ -9,52 +9,54 @@ except Exception as e:
 import ws_client
 from ws_client import *
 
-class Food:
-	def __init__(self, name, img_path, price, description):
-		self.name = name
-		self.img_path = img_path
-		self.price = price
-		self.description = description
-	def __str__(self):
-		return '{ ' + self.name + ', ' + \
-			self.img_path + ', ' +  self.price + \
-			', ' + self.description + ' }'
-
-class Customer:
-	id_counter = 0
-	def __init__(self, food_list= None, payed = None, review = None):
-		self.id = Customer.id_counter
-		self.food_list = food_list
-		self.payed = payed
-		self.review = review
-		Customer.id_counter += 1
-
-MENU = dict()
-
-with open('menu.csv') as f:                                                                                          
-	reader = csv.reader(f, delimiter=',')
-	for row in reader:
-		MENU[row[0]] = Food(*row)
-
-print(MENU)
-
-HISTORY = dict()
 
 def task():
+
+	import csv
+
+	class Food(object):
+		def __init__(self, name, img_path, price, description):
+			self.name = name
+			self.img_path = img_path
+			self.price = price
+			self.description = description
+		def __str__(self):
+			return '{ ' + self.name + ', ' + \
+				self.img_path + ', ' +  self.price + \
+				', ' + self.description + ' }'
+
+	class Customer(object):
+		id_counter = 0
+		def __init__(self, food_list= None, payed = None, review = None):
+			self.id = self.id_counter
+			self.food_list = food_list
+			self.payed = payed
+			self.review = review
+			self.id_counter += 1
+
+	MENU = dict()
+
+	with open(os.path.join(os.path.expanduser("~"),'playground/html/src/waiter/menu.csv')) as f:                                                                                          
+		reader = csv.reader(f, delimiter=',')
+		for row in reader:
+			MENU[row[0]] = Food(*row)
+
+	print(MENU)
+
+	HISTORY = dict()
 
 	while True:
 		im.init()
 		flagP = False
 		detected = False
-
 		im.executeModality('TEXT_default','Waiting for a human!')
 
 		#Checking if human stay in front of Pepper more than 2 seconds
 		im.robot.startSensorMonitor()
 		while not flagP:
 			while not detected:
-				p = im.robot.sensorvalue() #p is the array with data of all the sensors
-				detected = p[1] > 0.0 and p[1] < 1.0 #p[1] is the Front sonar
+				p = im.robot.sensorvalue() # p is the array with data of all the sensors
+				detected = p[1] > 0.0 and p[1] < 1.0 # p[1] is the Front sonar
 			if detected:
 				im.executeModality('TEXT_default','Hi!')
 				print('*Person Detected*')
@@ -70,11 +72,11 @@ def task():
 		im.robot.stopSensorMonitor()
 
 		im.execute('welcome')
-		a = im.ask('welcome', timeout=5)
+		a = im.ask('welcome', timeout=999)
 		c = Customer()
 
 		if(a=='menu'):
-			im.execute(a, timeout=5)
+			im.execute(a)
 			im.executeModality('TTS','Fine, let me show what is in our menu!')
 			food_no = 0
 			food_list = list(MENU.keys())
@@ -83,27 +85,26 @@ def task():
 				im.executeModality('TEXT',food.name.upper() + ' - '+ food.price)
 				im.executeModality('IMAGE',food.img_path)
 				im.executeModality('TTS',food.description)
-				a = im.ask('menu', timeout=5)
+				a = im.ask('menu', timeout=999)
 				if (a=='next'): food_no+=1
 				elif (a=='prev'): food_no-=1
 				food_no = min(len(food_list),max(0,food_no))
 
-
 		elif(a=='order'):
-			im.ask(a, timeout=555)
+			im.ask(a, timeout=999)
 
 		elif(a=='checkout'):
-			im.ask(a, timeout=555)
+			im.ask(a, timeout=999)
 
 		elif(a=='book'):
-			im.ask(a, timeout=555)
+			im.ask(a, timeout=999)
 
 		im.execute('goodbye')
 
 		a = im.ask('goodbye', timeout=999)
 
 		if (a=='review'):
-			im.ask(a, timeout=555)
+			im.ask(a, timeout=999)
 		
 		if (not a=='main'):
 			time.sleep(4)
