@@ -15,12 +15,15 @@ class Food:
 		self.img_path = img_path
 		self.price = price
 		self.description = description
+	def __str__(self):
+		return '{ ' + self.name + ', ' + \
+			self.img_path + ', ' +  self.price + \
+			', ' + self.description + ' }'
 
 class Customer:
 	id_counter = 0
-	def __init__(self, name = None, food_list= None, payed = None, review = None):
+	def __init__(self, food_list= None, payed = None, review = None):
 		self.id = Customer.id_counter
-		self.name = name
 		self.food_list = food_list
 		self.payed = payed
 		self.review = review
@@ -28,12 +31,14 @@ class Customer:
 
 MENU = dict()
 
-with open('../menu.csv', newline = '\n') as f:                                                                                          
+with open('menu.csv') as f:                                                                                          
 	reader = csv.reader(f, delimiter=',')
 	for row in reader:
 		MENU[row[0]] = Food(*row)
-		
-ORDERS = dict()
+
+print(MENU)
+
+HISTORY = dict()
 
 def task():
 
@@ -64,17 +69,46 @@ def task():
 		
 		im.robot.stopSensorMonitor()
 
-		customer = Customer()
+		im.execute('welcome')
+		a = im.ask('welcome', timeout=5)
+		c = Customer()
 
-		a = im.ask('welcome')
+		if(a=='menu'):
+			im.execute(a, timeout=5)
+			im.executeModality('TTS','Fine, let me show what is in our menu!')
+			food_no = 0
+			food_list = list(MENU.keys())
+			while a!='main':
+				food = MENU[food_list[food_no]]
+				im.executeModality('TEXT',food.name.upper() + ' - '+ food.price)
+				im.executeModality('IMAGE',food.img_path)
+				im.executeModality('TTS',food.description)
+				a = im.ask('menu', timeout=5)
+				if (a=='next'): food_no+=1
+				elif (a=='prev'): food_no-=1
+				food_no = min(len(food_list),max(0,food_no))
 
-		if(a=='view'):
+
+		elif(a=='order'):
 			im.ask(a, timeout=555)
-			im.execute('goodbye')
-		elif(a=='pay'):
+
+		elif(a=='checkout'):
 			im.ask(a, timeout=555)
-			im.execute('goodbye')
+
+		elif(a=='book'):
+			im.ask(a, timeout=555)
+
 		im.execute('goodbye')
+
+		a = im.ask('goodbye', timeout=999)
+
+		if (a=='review'):
+			im.ask(a, timeout=555)
+		
+		if (not a=='main'):
+			time.sleep(4)
+
+		HISTORY[c.id] = c
 
 		# flag = False
 		# flag2 = False

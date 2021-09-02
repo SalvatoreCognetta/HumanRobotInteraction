@@ -1,0 +1,26 @@
+IMAGE
+<*, *, *, *>:  waiter/img/pepperwaiter.jpg
+----
+TEXT_title
+<*, *, *, *>:  See you soon at Pepper's!
+----
+TEXT
+<*,*,*,*>:  Goodbye!
+----
+GESTURE
+<*,*,*,*>: animations/Stand/Gestures/Hey_6
+----
+TTS
+<*,*,*,*>: It was fun! Let me know if you want to leave an evaluation! See you soon at Pepper's! Bye!
+----
+ASR
+<*,*,*,*>:  {'main': ['main page', 'go back'], 'evaluate': ['evaluate', 'evaluation','review'], 'exit': ['bye','exit','goodbye']}
+----
+BUTTONS
+review
+<*,*,*,*>:  Review
+main
+<*,*,*,*>:  Main Page
+exit
+<*,*,*,*>:  Bye
+----

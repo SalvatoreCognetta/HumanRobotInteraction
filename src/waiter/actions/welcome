@@ -1,0 +1,28 @@
+IMAGE
+<*, *, *, *>:  waiter/img/pepperwaiter.jpg
+----
+TEXT_title
+<*, *, *, *>:  Welcome to Pepper's!
+----
+TEXT
+<*,*,*,*>:  How can I help you?
+----
+GESTURE
+<*,*,*,*>: animations/Stand/Gestures/Hey_1
+----
+TTS
+<*,*,*,*>: Welcome to Pepper's! Choose the action you prefer: tap a button or use your voice, I will guide you throught the destination! 
+----
+ASR
+<*,*,*,*>:  {'menu': ['menu', 'view the menu'], 'order': ['order', 'order some food','take an order'], 'checkout': ['checkout','pay the bill','view my order'], 'book': ['book','book a sit', 'book a table']}
+----
+BUTTONS
+menu
+<*,*,*,*>:  Menu
+order
+<*,*,*,*>:  Order
+checkout
+<*,*,*,*>:  Checkout
+book
+<*,*,*,*>:  Book
+----
