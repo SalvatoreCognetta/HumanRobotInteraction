@@ -1,0 +1,22 @@
+IMAGE
+<*, *, *, *>:  waiter/img/pepperwaiter.jpg
+----
+TEXT_title
+<*, *, *, *>:  Help!
+----
+TEXT
+<*,*,*,*>:  You will receive assistance ASAP!
+----
+GESTURE
+<*,*,*,*>: animations/Stand/Gestures/Hey_6
+----
+TTS
+<*,*,*,*>: A colleague of mine has been alerted and you will receive assistance immediately!
+----
+ASR
+<*,*,*,*>:  {'welcome': ['main page', 'go back', 'home']}
+----
+BUTTONS
+welcome
+<*,*,*,*>:  Main Page
+----

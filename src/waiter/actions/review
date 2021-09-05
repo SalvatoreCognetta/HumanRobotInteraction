@@ -1,0 +1,17 @@
+IMAGE
+<*,*,*,*>:  waiter/img/questionnaire.jpg
+----
+TEXT
+<*,*,it,*>: Grazie! Ora ti farò 10 domande su 2 categorie. <br> Puoi darmi un voto da 1 a 5!
+<*,*,*,*>:  Thanks! Now I will ask you 10 questions on 2 categories. <br> You can give a score from 1 to 5! 
+----
+TTS
+<*,*,it,*>: Grazie! Ora ti farò 10 domande su 2 categorie. Puoi darmi un voto da 1 a 5!
+<*,*,*,*>:  Thanks! Now I will ask you 10 questions on 2 categories. You can give a score from 1 to 5!
+----
+BUTTONS
+start
+<*,*,it,*>: Ok, iniziamo!
+<*,*,*,*>:  Ok, let's go!
+----
+

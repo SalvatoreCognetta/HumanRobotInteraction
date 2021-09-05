@@ -14,7 +14,7 @@ TTS
 <*,*,*,*>: Welcome to Pepper's! Choose the action you prefer: tap a button or use your voice, I will guide you throught the destination! 
 ----
 ASR
-<*,*,*,*>:  {'menu': ['menu', 'view the menu'], 'order': ['order', 'order some food','take an order'], 'checkout': ['checkout','pay the bill','view my order'], 'book': ['book','book a sit', 'book a table']}
+<*,*,*,*>:  {'menu': ['menu', 'view the menu'], 'order': ['order', 'order some food','take an order'], 'checkout': ['checkout','pay the bill','view my order'], 'review': ['review','questionnaire', 'make a review']}
 ----
 BUTTONS
 menu
@@ -23,6 +23,6 @@ order
 <*,*,*,*>:  Order
 checkout
 <*,*,*,*>:  Checkout
-book
-<*,*,*,*>:  Book
+review
+<*,*,*,*>:  Review
 ----

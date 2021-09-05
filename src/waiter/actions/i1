@@ -1,0 +1,25 @@
+IMAGE
+<*,*,*,*>:  waiter/img/intelligence.jpeg
+----
+TEXT
+<*,*,it,*>: Competente
+<*,*,*,*>:  Competent
+----
+TTS
+<*,*,it,*>: Ora è il turno dell'intelligenza percepita! Prometto di aver studiato per questa categoria!
+<*,*,*,*>:  Now is the turn of intelligence perceived! I promise I studied for this category!
+----
+BUTTONS
+one
+<*,*,*,*>:  1
+two
+<*,*,*,*>:  2
+three
+<*,*,*,*>:  3
+four
+<*,*,*,*>:  4
+five
+<*,*,*,*>:  5
+----
+
+

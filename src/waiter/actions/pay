@@ -1,0 +1,22 @@
+IMAGE
+<*, *, *, *>:  waiter/img/qr.png
+----
+TEXT_title
+<*, *, *, *>:  Payment!
+----
+TEXT
+<*,*,*,*>:  Please scan the QR code and <br> proceed with the payment on your smartphone!
+----
+GESTURE
+<*,*,*,*>: animations/Stand/Gestures/Hey_5
+----
+TTS
+<*,*,*,*>: Please scan the QR code and proceed with the payment on your smartphone!
+----
+ASR
+<*,*,*,*>:  {'welcome': ['main page', 'go back', 'home']}
+----
+BUTTONS
+welcome
+<*,*,*,*>:  Main Page
+----

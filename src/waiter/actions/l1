@@ -1,0 +1,25 @@
+IMAGE
+<*,*,*,*>:  waiter/img/likeability.jpg
+----
+TEXT
+<*,*,it,*>: Piacevole
+<*,*,*,*>:  Like
+----
+TTS
+<*,*,it,*>: Cominciamo con la simpatia! Non sono così male, no?
+<*,*,*,*>:  We start with likeability! Not that bad, am I?
+----
+BUTTONS
+one
+<*,*,*,*>:  1
+two
+<*,*,*,*>:  2
+three
+<*,*,*,*>:  3
+four
+<*,*,*,*>:  4
+five
+<*,*,*,*>:  5
+----
+
+

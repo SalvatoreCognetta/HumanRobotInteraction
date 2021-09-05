@@ -2,23 +2,14 @@ IMAGE
 <*, *, *, *>:  waiter/img/pepperwaiter.jpg
 ----
 TEXT_title
-<*, *, *, *>:  title
+<*, *, *, *>:  Checkout!
 ----
 TEXT
-<*,*,*,*>:  text
+<*,*,*,*>:  Please select your table id!
 ----
 GESTURE
 <*,*,*,*>: animations/Stand/Gestures/Hey_1
 ----
 TTS
-<*,*,*,*>: text-to-speech
-----
-ASR
-<*,*,*,*>:  {'1': ['1', '11'], '2': ['2', '22','222']}
-----
-BUTTONS
-1
-<*,*,*,*>:  1
-2
-<*,*,*,*>:  2
+<*,*,*,*>: Nice! Please tell me what is your table id: I will resume your order!
 ----
