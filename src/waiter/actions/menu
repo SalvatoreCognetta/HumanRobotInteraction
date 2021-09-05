@@ -10,9 +10,6 @@ TEXT
 GESTURE
 <*,*,*,*>: animations/Stand/Gestures/Hey_2
 ----
-TTS
-<*,*,*,*>: Fine, let me show what is in our menu!
-----
 ASR
 <*,*,*,*>:  {'next': ['next', 'go on', 'next dish'], 'prev': ['previous', 'go back','previous dish'], 'main': ['main page', 'go main page','go home', 'stop']}
 ----

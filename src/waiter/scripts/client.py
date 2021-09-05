@@ -88,7 +88,7 @@ def task():
 				a = im.ask('menu', timeout=999)
 				if (a=='next'): food_no+=1
 				elif (a=='prev'): food_no-=1
-				food_no = min(len(food_list),max(0,food_no))
+				food_no = min(len(food_list)-1,max(0,food_no))
 
 		elif(a=='order'):
 			im.ask(a, timeout=999)
@@ -99,15 +99,15 @@ def task():
 		elif(a=='book'):
 			im.ask(a, timeout=999)
 
-		im.execute('goodbye')
-
-		a = im.ask('goodbye', timeout=999)
+		if (not a=='main'):
+			a = im.ask('goodbye', timeout=999)
 
 		if (a=='review'):
 			im.ask(a, timeout=999)
 		
 		if (not a=='main'):
 			time.sleep(4)
+			flagP = True
 
 		HISTORY[c.id] = c
 
