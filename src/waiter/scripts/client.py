@@ -114,6 +114,12 @@ def task():
 				# shows a success page and thanks the customer
 				# flow input: go pay
 				# flow output: success page and thanks
+				# pagine:
+				#	- elenco menu
+				#	- conferma quantita
+				#	- resoconto (modifica/conferma)
+				# informiamo utente dell'id
+
 				a = im.ask(a, timeout=999)
 
 			elif(a=='checkout'):
@@ -125,11 +131,11 @@ def task():
 				# flow output: success page and thanks
 				a = im.ask(a, timeout=999)
 
-			elif(a=='book'):
-				# thinking if it is the case to make it, may be time wasting
-				# flow input: date, hour, number of people
-				# flow output: reservation id (Customer.id)
-				a = im.ask(a, timeout=999)
+			# elif(a=='book'):
+			# 	# thinking if it is the case to make it, may be time wasting
+			# 	# flow input: date, hour, number of people
+			# 	# flow output: reservation id (Customer.id)
+			# 	a = im.ask(a, timeout=999)
 
 			elif(a=='review'):
 				# flow input: 1 - 5 satisfaction rating
