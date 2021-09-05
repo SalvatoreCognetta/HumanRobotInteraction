@@ -14,13 +14,13 @@ TTS
 <*,*,*,*>: It was fun! Let me know if you want to leave an evaluation! See you soon at Pepper's! Bye!
 ----
 ASR
-<*,*,*,*>:  {'main': ['main page', 'go back'], 'evaluate': ['evaluate', 'evaluation','review'], 'exit': ['bye','exit','goodbye']}
+<*,*,*,*>:  {'welcome': ['main page', 'go back'], 'evaluate': ['evaluate', 'evaluation','review'], 'goodbye': ['bye','exit','goodbye']}
 ----
 BUTTONS
 review
 <*,*,*,*>:  Review
-main
+welcome
 <*,*,*,*>:  Main Page
-exit
+goodbye
 <*,*,*,*>:  Bye
 ----
