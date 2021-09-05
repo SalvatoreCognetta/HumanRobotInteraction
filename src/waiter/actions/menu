@@ -10,14 +10,3 @@ TEXT
 GESTURE
 <*,*,*,*>: animations/Stand/Gestures/Hey_2
 ----
-ASR
-<*,*,*,*>:  {'next': ['next', 'go on', 'next dish'], 'prev': ['previous', 'go back','previous dish'], 'main': ['main page', 'go main page','go home', 'stop']}
-----
-BUTTONS
-next
-<*,*,*,*>:  Next
-prev
-<*,*,*,*>:  Previous
-main
-<*,*,*,*>:  Main Page
-----
