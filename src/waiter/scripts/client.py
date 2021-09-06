@@ -1,10 +1,10 @@
 import sys, os, time
 
 try:
-    sys.path.insert(0, os.getenv('MODIM_HOME')+'/src/GUI')
+	sys.path.insert(0, os.getenv('MODIM_HOME')+'/src/GUI')
 except Exception as e:
-    print "Please set MODIM_HOME environment variable to MODIM folder."
-    sys.exit(1)
+	print "Please set MODIM_HOME environment variable to MODIM folder."
+	sys.exit(1)
 
 import ws_client
 from ws_client import *
@@ -17,25 +17,27 @@ def task():
 	GESTURES = ['animations/Stand/Gestures/Hey_'+str(i) for i in range(1,6)]
 
 	class Food(object):
-		def __init__(self, name, img_path, price, description, quantity=1):
+		def __init__(self, name, img_path, price, description, quantity=0):
 			self.name = name
 			self.img_path = img_path
 			self.price = price
 			self.description = description
 			self.quantity = quantity
-		def __str__(self):
-			return self.__dict__
+		# def __str__(self):
+		# 	return self.__dict__ # CODE EXECTUTION ERROR: __str__ returned non-string (type dict)
+		# Use vars(a), where a = Food()
 
 	class Customer(object):
 		id_counter = 0
-		def __init__(self, food_list= [], payed = False, review = None):
+		def __init__(self, food_list = {}, payed = False, review = None):
 			self.id = self.id_counter
 			self.food_list = food_list
 			self.payed = payed
 			self.review = review
 			self.id_counter += 1
-		def __str__(self):
-			return self.__dict__
+		# def __str__(self):
+		# 	return self.__dict__ # CODE EXECTUTION ERROR: __str__ returned non-string (type dict)
+		# Use vars(a), where a = Customer()
 
 
 	MENU = dict()
@@ -76,7 +78,7 @@ def task():
 
 		a = 'welcome'
 		c = Customer() # instantiate new customer
-		c.food_list = list(MENU.values())
+		c.food_list = MENU
 		while a not in ['goodbye', 'timeout']:
 			# state machine
 
@@ -117,11 +119,50 @@ def task():
 				# flow output: success page and thanks
 				# pagine:
 				#	- elenco menu
-				#	- conferma quantita
+				#	- specifica quantita
 				#	- resoconto (modifica/conferma)
 				# informiamo utente dell'id
+				# TODO Add ASR/TTS
+				im.execute(a)
+				im.executeModality('BUTTONS', [(key, MENU[key].name.upper()) for key in MENU] + [('review_order', 'Review order')])
 
-				a = im.ask(a, timeout=999)
+				a = chosen_food = im.ask(None, timeout=20)
+				
+				while a not in ['order', 'review_order']:
+					# print "Food selected: " + str(chosen_food)
+					food = MENU[chosen_food]
+
+					food_quantity = c.food_list[chosen_food].quantity
+					im.executeModality('TEXT',food.name.upper() + ' - $'+ str(food.price) + '<br><i><font size="3">'+ food.description + '</font></i>')
+					im.executeModality('IMAGE',food.img_path)
+					im.executeModality('BUTTONS', [('minus', '-'),  ('food_quantity', str(food_quantity)),  ('plus', '+'), ('order', 'Continue'), ('review_order', 'Review order')])
+
+					a = im.ask(None, timeout=20)
+					if a == 'minus':
+						food_quantity -= 1 if food_quantity > 0 else 0
+					elif a == 'plus':
+						food_quantity += 1
+					c.food_list[chosen_food].quantity = food_quantity
+
+			elif a == 'review_order':
+				im.execute(a)
+
+				order_table = '<table> <tr> <th>Dish</th> <th>Quantity</th> </tr>'
+				for key in c.food_list:
+					food = c.food_list[key]
+					if food.quantity > 0:
+						order_table += '<tr>'
+						order_table += '<td>'+str(food.name.upper())+'</td>'
+						order_table += '<td>'+str(food.quantity)+'</td>'
+						order_table += '</tr>'
+				order_table += '</table>'
+				im.executeModality('TEXT', order_table)
+
+				im.executeModality('BUTTONS', [('order', 'Modify order'), ('confirm_order', 'Confirm order')])
+				im.executeModality('TTS','This is your order, modify it or send to the cuisine.')
+				im.executeModality('ASR', {'order': ['modify', 'modify order'], 'confirm_order': ['confirm', 'confirm order', 'complete order', 'send order']})
+				
+				a = im.ask(None, timeout=100)
 
 			elif(a=='checkout'):
 				# gives a summary of the food ordered then asks 
@@ -145,7 +186,8 @@ def task():
 					im.executeModality('TEXT_title','Order review: Table #'+str(c.id))
 					total = 0
 					text = ''
-					for food in c.food_list:
+					for key in c.food_list:
+						food = c.food_list[key]
 						total += int(food.quantity)*int(food.price)
 						text += '<font size="3">'+ str(food.quantity) + ' - ' + food.name.upper() + ' -> $' + str(int(food.quantity)*int(food.price)) + '</font><br>'
 					text += 'Total: $' + str(total)
@@ -153,12 +195,6 @@ def task():
 					im.executeModality('BUTTONS', [('help', 'Help'),  ('welcome', 'Main Page'), ('pay', 'Payment')])
 					im.executeModality('ASR',{'help': ['help', 'assistance', 'help me'], 'pay': ['pay', 'payment','proceed'], 'welcome': ['main page', 'go main page','go home', 'stop']})
 					a = im.ask(None, timeout=15)
-
-			# elif(a=='book'):
-			# 	# thinking if it is the case to make it, may be time wasting
-			# 	# flow input: date, hour, number of people
-			# 	# flow output: reservation id (Customer.id)
-			# 	a = im.ask(a, timeout=999)
 
 			elif(a=='pay'):
 				# tell the customer to scan the qr code and pay
@@ -178,8 +214,8 @@ def task():
 			elif(a=='review'):
 				# flow input: 1 - 5 satisfaction rating
 				im.executeModality('TEXT_title', 'Questionnaire!')
-				im.executeModality('TEXT', 'Please select your table id!')
-				im.executeModality('TTS', 'Please select your table id!')
+				im.executeModality('TEXT', 'Please select your table number!')
+				im.executeModality('TTS', 'Please select your table number!')
 				im.executeModality('BUTTONS', [(str(id),str(id)) for id in HISTORY.keys()])
 				im.executeModality('ASR', {str(id):[str(id)] for id in HISTORY.keys()})
 				a = im.ask(None, timeout=15)

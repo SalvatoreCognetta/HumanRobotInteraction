@@ -1,0 +1,9 @@
+IMAGE
+<*, *, *, *>:  waiter/img/pepperwaiter.jpg
+----
+TEXT_title
+<*, *, *, *>:  Review your order
+----
+TEXT
+<*,*,*,*>:  Review your order
+----
