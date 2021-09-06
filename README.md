@@ -75,7 +75,7 @@ Inside the docker terminal press Ctrl+b, c (this creates a new terminal inside d
 
 ```bash
 export MODIM_HOME=/home/robot/playground/modim
-cd /home/robot/playground/html/sample/scripts
+cd /home/robot/playground/html/src/waiter/scripts
 python demo1.py
 ```
 
