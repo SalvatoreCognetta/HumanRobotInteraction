@@ -110,24 +110,16 @@ def task():
 					elif (a=='prev'): food_no-=1
 					food_no = food_no % len(food_list)
 
-			elif(a=='order'):
-				# gives a summary of the food ordered then asks 
-				# the type of payment or may display a fake QR code 
-				# saying to scan and go paying, after few seconds 
-				# shows a success page and thanks the customer
-				# flow input: go pay
-				# flow output: success page and thanks
+			elif (a == 'order'):
+				
 				# pagine:
 				#	- elenco menu
 				#	- specifica quantita
-				#	- resoconto (modifica/conferma)
-				# informiamo utente dell'id
-				# TODO Add ASR/TTS
 				im.execute(a)
 				im.executeModality('BUTTONS', [(key, MENU[key].name.upper()) for key in MENU] + [('review_order', 'Review order')])
+				im.executeModality('TTS', 'Choose your dishes')
 
 				a = chosen_food = im.ask(None, timeout=20)
-				
 				while a not in ['order', 'review_order']:
 					# print "Food selected: " + str(chosen_food)
 					food = MENU[chosen_food]
@@ -136,6 +128,7 @@ def task():
 					im.executeModality('TEXT',food.name.upper() + ' - $'+ str(food.price) + '<br><i><font size="3">'+ food.description + '</font></i>')
 					im.executeModality('IMAGE',food.img_path)
 					im.executeModality('BUTTONS', [('minus', '-'),  ('food_quantity', str(food_quantity)),  ('plus', '+'), ('order', 'Continue'), ('review_order', 'Review order')])
+					im.executeModality('ASR',{'minus': ['remove', 'delete', 'remove ' + food.name], 'plus': ['add', 'add ' + food.name], 'order': ['continue', 'continue order'], 'review_order': ['check order', 'review order']})
 
 					a = im.ask(None, timeout=20)
 					if a == 'minus':
@@ -144,10 +137,15 @@ def task():
 						food_quantity += 1
 					c.food_list[chosen_food].quantity = food_quantity
 
-			elif a == 'review_order':
+			elif (a == 'review_order'):
+				# gives a summary of the food ordered then asks 
+				# if the customer want to change the order or
+				# flow output: success page and thanks
+				#	- resoconto (modifica/conferma)
+				# informiamo utente dell'id
 				im.execute(a)
 
-				order_table = '<table> <tr> <th>Dish</th> <th>Quantity</th> </tr>'
+				order_table = "<table class='styled-table'> <thead> <tr> <th>Dish</th> <th>Quantity</th> </tr> </thead> <tbody>"
 				for key in c.food_list:
 					food = c.food_list[key]
 					if food.quantity > 0:
@@ -155,7 +153,7 @@ def task():
 						order_table += '<td>'+str(food.name.upper())+'</td>'
 						order_table += '<td>'+str(food.quantity)+'</td>'
 						order_table += '</tr>'
-				order_table += '</table>'
+				order_table += '</tbody> </table>'
 				im.executeModality('TEXT', order_table)
 
 				im.executeModality('BUTTONS', [('order', 'Modify order'), ('confirm_order', 'Confirm order')])
@@ -163,6 +161,16 @@ def task():
 				im.executeModality('ASR', {'order': ['modify', 'modify order'], 'confirm_order': ['confirm', 'confirm order', 'complete order', 'send order']})
 				
 				a = im.ask(None, timeout=100)
+
+				if a == 'confirm_order':
+					text = 'Your identification number is ' + str(c.id) + '. Use it for checkout.'
+					im.executeModality('TEXT', text)
+					im.executeModality('TTS', text)
+					im.executeModality('BUTTONS', [('welcome', 'Main page')])
+					im.executeModality('ASR',{'welcome': ['main page', 'go main page','go home']})
+					
+					a = im.ask(None, timeout=50)
+					
 
 			elif(a=='checkout'):
 				# gives a summary of the food ordered then asks 
@@ -184,14 +192,22 @@ def task():
 					im.executeModality('TTS','Please review your order and proceed with payment or request assistance!')
 					time.sleep(1)
 					im.executeModality('TEXT_title','Order review: Table #'+str(c.id))
+					
 					total = 0
-					text = ''
+					order_table = "<table class='styled-table'> <thead> <tr> <th>Dish</th> <th>Quantity</th> <th>Price</th> </tr> </thead> <tbody>"
 					for key in c.food_list:
 						food = c.food_list[key]
-						total += int(food.quantity)*int(food.price)
-						text += '<font size="3">'+ str(food.quantity) + ' - ' + food.name.upper() + ' -> $' + str(int(food.quantity)*int(food.price)) + '</font><br>'
-					text += 'Total: $' + str(total)
-					im.executeModality('TEXT',text)
+						if food.quantity > 0:
+							total += int(food.quantity)*int(food.price)
+							order_table += '<tr>'
+							order_table += '<td>'+str(food.name.upper())+'</td>'
+							order_table += '<td>'+str(food.quantity)+'</td>'
+							order_table += '<td>$ '+str(int(food.quantity)*int(food.price))+'</td>'
+							order_table += '</tr>'
+					order_table += "<tr> <td colspan='3'>Total: $"+str(total)+"</td> </tr>"
+					order_table += '</tbody> </table>'
+
+					im.executeModality('TEXT',order_table)
 					im.executeModality('BUTTONS', [('help', 'Help'),  ('welcome', 'Main Page'), ('pay', 'Payment')])
 					im.executeModality('ASR',{'help': ['help', 'assistance', 'help me'], 'pay': ['pay', 'payment','proceed'], 'welcome': ['main page', 'go main page','go home', 'stop']})
 					a = im.ask(None, timeout=15)
