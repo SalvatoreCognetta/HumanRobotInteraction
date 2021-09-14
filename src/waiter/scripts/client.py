@@ -123,10 +123,14 @@ def task():
 				#	- specifica quantita
 				im.execute(action)
 				im.executeModality('BUTTONS', [(key, MENU[key].name.upper()) for key in MENU] + [('review_order', 'Review order')])
+				menu_asr = dict() # Otherwise it will fail with globalname not found
+				for key in MENU:
+					menu_asr[key] = [MENU[key].name]
+				im.executeModality('ASR', menu_asr)
 				im.executeModality('TTS', 'Choose your dishes')
 
-				action = chosen_food = im.ask(None, timeout=20)
-				while action not in ['order', 'review_order']:
+				action = chosen_food = im.ask(None, timeout=30)
+				while action not in ['order', 'review_order', 'timeout']:
 					# print "Food selected: " + str(chosen_food)
 					food = MENU[chosen_food]
 
@@ -134,7 +138,7 @@ def task():
 					im.executeModality('TEXT',food.name.upper() + ' - $'+ str(food.price) + '<br><i><font size="3">'+ food.description + '</font></i>')
 					im.executeModality('IMAGE',food.img_path)
 					im.executeModality('BUTTONS', [('minus', '-'),  ('food_quantity', str(food_quantity)),  ('plus', '+'), ('order', 'Continue'), ('review_order', 'Review order')])
-					im.executeModality('ASR',{'minus': ['remove', 'delete', 'remove ' + food.name], 'plus': ['add', 'add ' + food.name], 'order': ['continue', 'continue order'], 'review_order': ['check order', 'review order']})
+					im.executeModality('ASR',{'minus': ['remove', 'delete', 'remove ' + food.name], 'plus': ['add', 'add ' + food.name], 'order': ['continue', 'continue order'], 'review_order': ['review', 'check order', 'review order']})
 
 					action = im.ask(None, timeout=20)
 					if action == 'minus':
