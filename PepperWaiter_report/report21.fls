@@ -1,0 +1,42 @@
+PWD /home/daniele/Documents/Human Robot Interaction/PepperProject/PepperWaiter_report
+INPUT /etc/texmf/web2c/texmf.cnf
+INPUT /usr/share/texmf/web2c/texmf.cnf
+INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
+INPUT /home/daniele/Documents/Human Robot Interaction/PepperProject/PepperWaiter_report/report21.tex
+OUTPUT /home/daniele/Documents/Human Robot Interaction/PepperProject/PepperWaiter_report/report21.log
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+INPUT /usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
+INPUT /home/daniele/Documents/Human Robot Interaction/PepperProject/PepperWaiter_report/report21.aux
+INPUT /home/daniele/Documents/Human Robot Interaction/PepperProject/PepperWaiter_report/report21.aux
+OUTPUT /home/daniele/Documents/Human Robot Interaction/PepperProject/PepperWaiter_report/report21.aux
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+OUTPUT /home/daniele/Documents/Human Robot Interaction/PepperProject/PepperWaiter_report/report21.pdf
+INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /home/daniele/Documents/Human Robot Interaction/PepperProject/PepperWaiter_report/report21.toc
+INPUT /home/daniele/Documents/Human Robot Interaction/PepperProject/PepperWaiter_report/report21.toc
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+OUTPUT /home/daniele/Documents/Human Robot Interaction/PepperProject/PepperWaiter_report/report21.toc
+INPUT /home/daniele/Documents/Human Robot Interaction/PepperProject/PepperWaiter_report/report21.aux
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
