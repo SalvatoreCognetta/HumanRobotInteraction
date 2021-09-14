@@ -10,14 +10,15 @@ import ws_client
 from ws_client import *
 
 
+
 def task():
 
-	import csv, random
+	import csv, random, copy
 
 	GESTURES = ['animations/Stand/Gestures/Hey_'+str(i) for i in range(1,6)]
 
 	class Food(object):
-		def __init__(self, name, img_path, price, description, quantity=1):
+		def __init__(self, name, img_path, price, description, quantity=0):
 			self.name = name
 			self.img_path = img_path
 			self.price = price
@@ -28,13 +29,11 @@ def task():
 		# Use vars(action), where action = Food()
 
 	class Customer(object):
-		id_counter = 0
-		def __init__(self, food_list = {}, payed = False, review = None):
-			self.id = self.id_counter
+		def __init__(self, food_list = {}, payed = False, review = None, id_counter = 1):
+			self.id = id_counter
 			self.food_list = food_list
 			self.payed = payed
 			self.review = review
-			self.id_counter += 1
 		# def __str__(self):
 		# 	return self.__dict__ # CODE EXECTUTION ERROR: __str__ returned non-string (type dict)
 		# Use vars(action), where action = Customer()
@@ -48,6 +47,9 @@ def task():
 			MENU[row[0]] = Food(*row)
 
 	print(MENU)
+	
+	ID_COUNTER = 1
+	print(ID_COUNTER)
 
 	HISTORY = dict()
 
@@ -77,8 +79,11 @@ def task():
 		im.robot.stopSensorMonitor()
 
 		action = 'welcome'
-		customer = Customer() # instantiate new customer
-		customer.food_list = MENU
+		food_list = copy.deepcopy(MENU)
+		customer = Customer(food_list=food_list, id_counter=ID_COUNTER) # instantiate new customer
+		ID_COUNTER += 1
+		print("*********Customer*********: ", customer.id)
+		# customer.food_list = MENU
 		while action not in ['goodbye', 'timeout']:
 			# state machine
 
@@ -169,7 +174,6 @@ def task():
 					im.executeModality('TTS', text)
 					im.executeModality('BUTTONS', [('welcome', 'Main page')])
 					im.executeModality('ASR',{'welcome': ['main page', 'go main page','go home']})
-					
 					
 					action = im.ask(None, timeout=50)
 					
