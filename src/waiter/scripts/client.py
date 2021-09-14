@@ -17,7 +17,7 @@ def task():
 	GESTURES = ['animations/Stand/Gestures/Hey_'+str(i) for i in range(1,6)]
 
 	class Food(object):
-		def __init__(self, name, img_path, price, description, quantity=0):
+		def __init__(self, name, img_path, price, description, quantity=1):
 			self.name = name
 			self.img_path = img_path
 			self.price = price
@@ -25,7 +25,7 @@ def task():
 			self.quantity = quantity
 		# def __str__(self):
 		# 	return self.__dict__ # CODE EXECTUTION ERROR: __str__ returned non-string (type dict)
-		# Use vars(a), where a = Food()
+		# Use vars(action), where action = Food()
 
 	class Customer(object):
 		id_counter = 0
@@ -37,7 +37,7 @@ def task():
 			self.id_counter += 1
 		# def __str__(self):
 		# 	return self.__dict__ # CODE EXECTUTION ERROR: __str__ returned non-string (type dict)
-		# Use vars(a), where a = Customer()
+		# Use vars(action), where action = Customer()
 
 
 	MENU = dict()
@@ -76,27 +76,27 @@ def task():
 		
 		im.robot.stopSensorMonitor()
 
-		a = 'welcome'
-		c = Customer() # instantiate new customer
-		c.food_list = MENU
-		while a not in ['goodbye', 'timeout']:
+		action = 'welcome'
+		customer = Customer() # instantiate new customer
+		customer.food_list = MENU
+		while action not in ['goodbye', 'timeout']:
 			# state machine
 
-			if(a=='welcome'):
+			if(action=='welcome'):
 				# welcoming the customer and asks if needs help
 				# flow input: menu/order/checkout/book(maybe -> see book state)
 				# flow output: food description
-				a = im.ask('welcome', timeout=20)
+				action = im.ask('welcome', timeout=20)
 
-			elif(a=='menu'):
+			elif(action=='menu'):
 				# the customer can swipe the foods while pepper
 				# gives a description and the price
 				# flow input: prev/ main page/ next
 				# flow output: food description
-				im.execute(a)
+				im.execute(action)
 				food_no = 0
 				food_list = list(MENU.keys())
-				while a!='welcome':
+				while action!='welcome':
 					food = MENU[food_list[food_no]]
 					im.executeModality('TEXT',food.name.upper() + ' - $'+ str(food.price) + '<br><i><font size="3">'+ food.description + '</font></i>')
 					im.executeModality('IMAGE',food.img_path)
@@ -105,49 +105,50 @@ def task():
 					im.executeModality('TTS',food.description)
 					# im.robot.bm_service = im.robot.session.service("ALBackgroundMovement") # gives error
 					# im.executeModality('GESTURE',random.choice(GESTURES)) # gives error
-					a = im.ask(None, timeout=20)
-					if (a=='next'): food_no+=1
-					elif (a=='prev'): food_no-=1
+					action = im.ask(None, timeout=20)
+					if (action=='next'): food_no+=1
+					elif (action=='prev'): food_no-=1
 					food_no = food_no % len(food_list)
 
-			elif (a == 'order'):
-				
+			elif (action == 'order'):
+				# the client can select from a list of foods				
+				# and specify the number of desired dish
 				# pagine:
 				#	- elenco menu
 				#	- specifica quantita
-				im.execute(a)
+				im.execute(action)
 				im.executeModality('BUTTONS', [(key, MENU[key].name.upper()) for key in MENU] + [('review_order', 'Review order')])
 				im.executeModality('TTS', 'Choose your dishes')
 
-				a = chosen_food = im.ask(None, timeout=20)
-				while a not in ['order', 'review_order']:
+				action = chosen_food = im.ask(None, timeout=20)
+				while action not in ['order', 'review_order']:
 					# print "Food selected: " + str(chosen_food)
 					food = MENU[chosen_food]
 
-					food_quantity = c.food_list[chosen_food].quantity
+					food_quantity = customer.food_list[chosen_food].quantity
 					im.executeModality('TEXT',food.name.upper() + ' - $'+ str(food.price) + '<br><i><font size="3">'+ food.description + '</font></i>')
 					im.executeModality('IMAGE',food.img_path)
 					im.executeModality('BUTTONS', [('minus', '-'),  ('food_quantity', str(food_quantity)),  ('plus', '+'), ('order', 'Continue'), ('review_order', 'Review order')])
 					im.executeModality('ASR',{'minus': ['remove', 'delete', 'remove ' + food.name], 'plus': ['add', 'add ' + food.name], 'order': ['continue', 'continue order'], 'review_order': ['check order', 'review order']})
 
-					a = im.ask(None, timeout=20)
-					if a == 'minus':
+					action = im.ask(None, timeout=20)
+					if action == 'minus':
 						food_quantity -= 1 if food_quantity > 0 else 0
-					elif a == 'plus':
+					elif action == 'plus':
 						food_quantity += 1
-					c.food_list[chosen_food].quantity = food_quantity
+					customer.food_list[chosen_food].quantity = food_quantity
 
-			elif (a == 'review_order'):
+			elif (action == 'review_order'):
 				# gives a summary of the food ordered then asks 
 				# if the customer want to change the order or
 				# flow output: success page and thanks
 				#	- resoconto (modifica/conferma)
 				# informiamo utente dell'id
-				im.execute(a)
+				im.execute(action)
 
 				order_table = "<table class='styled-table'> <thead> <tr> <th>Dish</th> <th>Quantity</th> </tr> </thead> <tbody>"
-				for key in c.food_list:
-					food = c.food_list[key]
+				for key in customer.food_list:
+					food = customer.food_list[key]
 					if food.quantity > 0:
 						order_table += '<tr>'
 						order_table += '<td>'+str(food.name.upper())+'</td>'
@@ -160,43 +161,44 @@ def task():
 				im.executeModality('TTS','This is your order, modify it or send to the cuisine.')
 				im.executeModality('ASR', {'order': ['modify', 'modify order'], 'confirm_order': ['confirm', 'confirm order', 'complete order', 'send order']})
 				
-				a = im.ask(None, timeout=100)
+				action = im.ask(None, timeout=100)
 
-				if a == 'confirm_order':
-					text = 'Your identification number is ' + str(c.id) + '. Use it for checkout.'
+				if action == 'confirm_order':
+					text = 'Your identification number is ' + str(customer.id) + '. Use it for checkout.'
 					im.executeModality('TEXT', text)
 					im.executeModality('TTS', text)
 					im.executeModality('BUTTONS', [('welcome', 'Main page')])
 					im.executeModality('ASR',{'welcome': ['main page', 'go main page','go home']})
 					
-					a = im.ask(None, timeout=50)
+					
+					action = im.ask(None, timeout=50)
 					
 
-			elif(a=='checkout'):
+			elif(action=='checkout'):
 				# gives a summary of the food ordered then asks 
 				# the type of payment or may display a fake QR code 
 				# saying to scan and go paying, after few seconds 
 				# shows a success page and thanks the customer
 				# flow input: go pay
 				# flow output: success page and thanks
-				im.execute(a)
+				im.execute(action)
 				im.executeModality('BUTTONS', [(str(id),str(id)) for id in HISTORY.keys()])
 				im.executeModality('ASR', {str(id):[str(id)] for id in HISTORY.keys()})
-				a = im.ask(None, timeout=15)
-				if(a!='timeout'):
-					c = HISTORY[int(a)]
+				action = im.ask(None, timeout=15)
+				if(action!='timeout'):
+					customer = HISTORY[int(action)]
 					im.executeModality('TEXT','Thanks!')
 					im.executeModality('TTS','Thanks!')
 					time.sleep(1)
 					im.executeModality('TEXT','Please review your order and proceed <br> with payment or request assistance!')
 					im.executeModality('TTS','Please review your order and proceed with payment or request assistance!')
 					time.sleep(1)
-					im.executeModality('TEXT_title','Order review: Table #'+str(c.id))
+					im.executeModality('TEXT_title','Order review: Table #'+str(customer.id))
 					
 					total = 0
 					order_table = "<table class='styled-table'> <thead> <tr> <th>Dish</th> <th>Quantity</th> <th>Price</th> </tr> </thead> <tbody>"
-					for key in c.food_list:
-						food = c.food_list[key]
+					for key in customer.food_list:
+						food = customer.food_list[key]
 						if food.quantity > 0:
 							total += int(food.quantity)*int(food.price)
 							order_table += '<tr>'
@@ -210,58 +212,58 @@ def task():
 					im.executeModality('TEXT',order_table)
 					im.executeModality('BUTTONS', [('help', 'Help'),  ('welcome', 'Main Page'), ('pay', 'Payment')])
 					im.executeModality('ASR',{'help': ['help', 'assistance', 'help me'], 'pay': ['pay', 'payment','proceed'], 'welcome': ['main page', 'go main page','go home', 'stop']})
-					a = im.ask(None, timeout=15)
+					action = im.ask(None, timeout=15)
 
-			elif(a=='pay'):
+			elif(action=='pay'):
 				# tell the customer to scan the qr code and pay
 				# flow input: go back to main
-				a = im.ask(a, timeout=3)
-				if(a=='timeout'):
+				action = im.ask(action, timeout=3)
+				if(action=='timeout'):
 					im.executeModality('TEXT','Please wait for the transition to end..')
 					im.executeModality('ASR', {})
 					im.executeModality('BUTTONS', [])
 					time.sleep(2)
-					c.payed = True
-					a = 'goodbye'
+					customer.payed = True
+					action = 'goodbye'
 					im.executeModality('TEXT','The payment was successful, <br> you will be redirected in few seconds..')
 					im.executeModality('TTS','The payment was successful, you will be redirected in few seconds..')
 					time.sleep(2)
 
-			elif(a=='review'):
+			elif(action=='review'):
 				# flow input: 1 - 5 satisfaction rating
 				im.executeModality('TEXT_title', 'Questionnaire!')
 				im.executeModality('TEXT', 'Please select your table number!')
 				im.executeModality('TTS', 'Please select your table number!')
 				im.executeModality('BUTTONS', [(str(id),str(id)) for id in HISTORY.keys()])
 				im.executeModality('ASR', {str(id):[str(id)] for id in HISTORY.keys()})
-				a = im.ask(None, timeout=15)
-				if(a!='timeout'):
-					c = HISTORY[int(a)]
+				action = im.ask(None, timeout=15)
+				if(action!='timeout'):
+					customer = HISTORY[int(action)]
 					time.sleep(1)
-					a = im.ask(a, timeout=15)
+					action = im.ask(action, timeout=15)
 					im.logenable() # Activating log to store the answers
 					q = dict()
 					for t in ['l','i']:
 						for i in range(1,6):
-							a = im.ask(t+str(i), timeout=15)
-							im.logdata(t+str(i)+': '+a)
-							q[t+str(i)] = a
-					c.review = q
+							action = im.ask(t+str(i), timeout=15)
+							im.logdata(t+str(i)+': '+action)
+							q[t+str(i)] = action
+					customer.review = q
 					im.logclose()
-					a = 'welcome'
+					action = 'welcome'
 					im.executeModality('TEXT','Thank you! The questionnaire was successful! <br> You will be redirected in few seconds..')
 					im.executeModality('TTS','Thank you! The questionnaire was successful!')
 					time.sleep(3)
 				
-			elif(a=='help'):
+			elif(action=='help'):
 				# advice the customer that he will receive assistance soon
 				# flow input: go back to main
-				a = im.ask(a, timeout=15)
+				action = im.ask(action, timeout=15)
 			
-			if(a=='goodbye'):
+			if(action=='goodbye'):
 				# flow input: confirmation/ give a rating/ main page
-				a = im.ask(a, timeout=15)
-				if(a=='goodbye' or a=='timeout'): # goodbye confirmation then wait for the customer to go away
+				action = im.ask(action, timeout=15)
+				if(action=='goodbye' or action=='timeout'): # goodbye confirmation then wait for the customer to go away
 					im.executeModality('TEXT_title','Goodbye!')
 					im.executeModality('ASR', {})
 					im.executeModality('BUTTONS', [])
@@ -269,8 +271,8 @@ def task():
 					im.executeModality('TTS',"See you soon at Pepper's!")
 					time.sleep(4)
 
-			print(c)
-			HISTORY[c.id] = c
+			print(customer)
+			HISTORY[customer.id] = customer
 
 
 if __name__ == "__main__":
