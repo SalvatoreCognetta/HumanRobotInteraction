@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2021.9.13)  15 SEP 2021 22:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2021.9.13)  15 SEP 2021 22:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -872,19 +872,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 73--74
 
  []
 
-[4]
-<img/pepperSDK.png, id=78, 1445.4pt x 755.07094pt>
+<img/pepperSDK.png, id=73, 1445.4pt x 755.07094pt>
 File: img/pepperSDK.png Graphic file (type png)
 <use img/pepperSDK.png>
 Package pdftex.def Info: img/pepperSDK.png  used on input line 78.
 (pdftex.def)             Requested size: 433.62335pt x 226.52303pt.
-
+[4]
 Underfull \hbox (badness 10000) in paragraph at lines 87--89
 
  []
 
-[5 </home/daniele/Documents/Human Robot Interaction/PepperProject/PepperWaiter_report/img/pepperSDK.png (PNG copy)>]
-<img/naoqi.png, id=87, 642.14906pt x 335.00156pt>
+<img/naoqi.png, id=81, 642.14906pt x 335.00156pt>
 File: img/naoqi.png Graphic file (type png)
 <use img/naoqi.png>
 Package pdftex.def Info: img/naoqi.png  used on input line 91.
@@ -894,7 +892,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--97
 
  []
 
-
+[5 </home/daniele/Documents/Human Robot Interaction/PepperProject/PepperWaiter_report/img/pepperSDK.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 101--102
 
  []
@@ -958,7 +956,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  44i,7n,45p,988b,1209s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on "/home/daniele/Documents/Human Robot Interaction/PepperProject/PepperWaiter_report/report21.pdf" (10 pages, 1074053 bytes).
+Output written on "/home/daniele/Documents/Human Robot Interaction/PepperProject/PepperWaiter_report/report21.pdf" (10 pages, 1073982 bytes).
 PDF statistics:
  166 PDF objects out of 1000 (max. 8388607)
  138 compressed objects within 2 object streams
