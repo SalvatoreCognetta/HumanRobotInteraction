@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2021.9.13)  14 SEP 2021 11:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2021.9.13)  14 SEP 2021 19:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -361,7 +361,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write3
 \openout3 = `report21.toc'.
 
- [2] [3] (/home/daniele/Documents/Human Robot Interaction/PepperProject/PepperWaiter_report/report21.aux) ) 
+ [2] [3] [4] (/home/daniele/Documents/Human Robot Interaction/PepperProject/PepperWaiter_report/report21.aux) ) 
 Here is how much of TeX's memory you used:
  525 strings out of 492982
  5735 string characters out of 6134896
@@ -369,12 +369,12 @@ Here is how much of TeX's memory you used:
  4153 multiletter control sequences out of 15000+600000
  6063 words of font info for 22 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 23i,6n,19p,498b,193s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 23i,6n,19p,484b,193s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on "/home/daniele/Documents/Human Robot Interaction/PepperProject/PepperWaiter_report/report21.pdf" (3 pages, 39477 bytes).
+Output written on "/home/daniele/Documents/Human Robot Interaction/PepperProject/PepperWaiter_report/report21.pdf" (4 pages, 40577 bytes).
 PDF statistics:
- 26 PDF objects out of 1000 (max. 8388607)
- 17 compressed objects within 1 object stream
+ 29 PDF objects out of 1000 (max. 8388607)
+ 19 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
