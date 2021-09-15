@@ -1,6 +1,9 @@
-\contentsline {section}{\numberline {1}Introduction}{2}
-\contentsline {section}{\numberline {2}Inspiration and Research}{2}
-\contentsline {section}{\numberline {3}Solution}{2}
-\contentsline {section}{\numberline {4}Implementation}{2}
-\contentsline {section}{\numberline {5}Results}{3}
-\contentsline {section}{\numberline {6}Conclusion}{3}
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
+\contentsline {section}{\numberline {2}Inspiration and Research}{3}{section.2}%
+\contentsline {section}{\numberline {3}Solution}{3}{section.3}%
+\contentsline {section}{\numberline {4}Implementation}{3}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Softbank SDK simulator}{4}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Naoqi - Pepper tools}{5}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Modim}{6}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Results}{7}{section.5}%
+\contentsline {section}{\numberline {6}Conclusion}{7}{section.6}%
