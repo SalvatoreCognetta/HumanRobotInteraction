@@ -1,9 +1,19 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1}Introduction}{3}{section.1}
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2}Inspiration and Research}{3}{section.2}
-\contentsline {section}{\numberline {3}Solution}{3}{section.3}
-\contentsline {section}{\numberline {4}Implementation}{3}{section.4}
-\contentsline {subsection}{\numberline {4.1}Softbank SDK simulator}{4}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Naoqi - Pepper tools}{5}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Modim}{6}{subsection.4.3}
-\contentsline {section}{\numberline {5}Results}{7}{section.5}
-\contentsline {section}{\numberline {6}Conclusion}{7}{section.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Implementation}{4}{section.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1}Softbank SDK simulator}{4}{subsection.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2}Naoqi - Pepper tools}{5}{subsection.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3}Modim}{6}{subsection.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}Results}{8}{section.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Conclusion}{9}{section.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{References}{10}{section*.6}
