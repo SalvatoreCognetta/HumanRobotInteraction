@@ -8,7 +8,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.1}Softbank SDK simulator}{5}{subsection.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}Naoqi - Pepper tools}{5}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.2}Naoqi - Pepper tools}{6}{subsection.3.2}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.3}Modim}{7}{subsection.3.3}%
 \defcounter {refsection}{0}\relax 

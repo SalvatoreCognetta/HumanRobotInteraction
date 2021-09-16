@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.11.29)  16 SEP 2021 11:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.11.29)  16 SEP 2021 11:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/salvatore/Documenti/HRI/PepperProject/PepperWaiter_report/report21.tex
-(/home/salvatore/Documenti/HRI/PepperProject/PepperWaiter_report/report21.tex
+**/home/salvatore/Documenti/HRI/PepperProject/report/report21.tex
+(/home/salvatore/Documenti/HRI/PepperProject/report/report21.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14> (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
@@ -422,7 +422,7 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count389
 \l__pdf_internal_box=\box47
-) (/home/salvatore/Documenti/HRI/PepperProject/PepperWaiter_report/report21.aux)
+) (/home/salvatore/Documenti/HRI/PepperProject/report/report21.aux)
 \openout1 = `report21.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
@@ -456,7 +456,7 @@ Package biblatex Info: Data encoding 'utf8' specified.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'report21.bbl' found.
- (/home/salvatore/Documenti/HRI/PepperProject/PepperWaiter_report/report21.bbl
+ (/home/salvatore/Documenti/HRI/PepperProject/report/report21.bbl
 
 Package biblatex Warning: BibTeX reported the following issues
 (biblatex)                with '10.3115/976909.979652':
@@ -540,7 +540,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 19.
 LaTeX Info: Redefining \pageref on input line 19.
 LaTeX Info: Redefining \nameref on input line 19.
- (/home/salvatore/Documenti/HRI/PepperProject/PepperWaiter_report/report21.out) (/home/salvatore/Documenti/HRI/PepperProject/PepperWaiter_report/report21.out)
+ (/home/salvatore/Documenti/HRI/PepperProject/report/report21.out) (/home/salvatore/Documenti/HRI/PepperProject/report/report21.out)
 \@outlinefile=\write4
 \openout4 = `report21.out'.
 
@@ -553,7 +553,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 23.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (/home/salvatore/Documenti/HRI/PepperProject/PepperWaiter_report/report21.toc
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (/home/salvatore/Documenti/HRI/PepperProject/report/report21.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 9.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -579,147 +579,151 @@ File: img/pepperSDK.png Graphic file (type png)
 <use img/pepperSDK.png>
 Package pdftex.def Info: img/pepperSDK.png  used on input line 81.
 (pdftex.def)             Requested size: 433.62335pt x 226.52303pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 90--92
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 91--93
 
  []
 
-<img/naoqi.png, id=81, 642.14906pt x 335.00156pt>
+<img/naoqi.png, id=88, 642.14906pt x 335.00156pt>
 File: img/naoqi.png Graphic file (type png)
 <use img/naoqi.png>
-Package pdftex.def Info: img/naoqi.png  used on input line 94.
+Package pdftex.def Info: img/naoqi.png  used on input line 95.
 (pdftex.def)             Requested size: 385.2924pt x 201.00247pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--100
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
 
  []
 
-[5] [6 </home/salvatore/Documenti/HRI/PepperProject/PepperWaiter_report/img/pepperSDK.png (PNG copy)> </home/salvatore/Documenti/HRI/PepperProject/PepperWaiter_report/img/naoqi.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 104--105
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
 
-<img/modim.png, id=95, 362.1884pt x 226.0324pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6 </home/salvatore/Documenti/HRI/PepperProject/report/img/pepperSDK.png (PNG copy)>]
+<img/modim.png, id=94, 362.1884pt x 226.0324pt>
 File: img/modim.png Graphic file (type png)
 <use img/modim.png>
-Package pdftex.def Info: img/modim.png  used on input line 107.
+Package pdftex.def Info: img/modim.png  used on input line 108.
 (pdftex.def)             Requested size: 217.3147pt x 135.62048pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--113
+Underfull \hbox (badness 10000) in paragraph at lines 113--114
 
  []
 
-[7 </home/salvatore/Documenti/HRI/PepperProject/PepperWaiter_report/img/modim.png>]
+[7 </home/salvatore/Documenti/HRI/PepperProject/report/img/naoqi.png (PNG copy)> </home/salvatore/Documenti/HRI/PepperProject/report/img/modim.png>]
 <img/modim_notok.png, id=105, 455.45157pt x 314.67563pt>
 File: img/modim_notok.png Graphic file (type png)
 <use img/modim_notok.png>
-Package pdftex.def Info: img/modim_notok.png  used on input line 120.
+Package pdftex.def Info: img/modim_notok.png  used on input line 121.
 (pdftex.def)             Requested size: 215.0023pt x 148.55057pt.
 <img/modim_ok.png, id=106, 459.21562pt x 319.1925pt>
 File: img/modim_ok.png Graphic file (type png)
 <use img/modim_ok.png>
-Package pdftex.def Info: img/modim_ok.png  used on input line 126.
+Package pdftex.def Info: img/modim_ok.png  used on input line 127.
 (pdftex.def)             Requested size: 215.0023pt x 149.44577pt.
- [8 </home/salvatore/Documenti/HRI/PepperProject/PepperWaiter_report/img/modim_notok.png (PNG copy)> </home/salvatore/Documenti/HRI/PepperProject/PepperWaiter_report/img/modim_ok.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 136--137
+ [8 </home/salvatore/Documenti/HRI/PepperProject/report/img/modim_notok.png (PNG copy)> </home/salvatore/Documenti/HRI/PepperProject/report/img/modim_ok.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 137--138
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--139
+Underfull \hbox (badness 10000) in paragraph at lines 139--140
 
  []
 
 <img/waiting_human.png, id=113, 485.56406pt x 341.77687pt>
 File: img/waiting_human.png Graphic file (type png)
 <use img/waiting_human.png>
-Package pdftex.def Info: img/waiting_human.png  used on input line 144.
+Package pdftex.def Info: img/waiting_human.png  used on input line 145.
 (pdftex.def)             Requested size: 215.0023pt x 151.33142pt.
 <img/menu.png, id=114, 585.68813pt x 466.74374pt>
 File: img/menu.png Graphic file (type png)
 <use img/menu.png>
-Package pdftex.def Info: img/menu.png  used on input line 150.
+Package pdftex.def Info: img/menu.png  used on input line 151.
 (pdftex.def)             Requested size: 193.50075pt x 154.20395pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--159
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
 
  []
 
 <img/pizza.png, id=116, 487.06969pt x 468.24937pt>
 File: img/pizza.png Graphic file (type png)
 <use img/pizza.png>
-Package pdftex.def Info: img/pizza.png  used on input line 161.
+Package pdftex.def Info: img/pizza.png  used on input line 162.
 (pdftex.def)             Requested size: 194.82442pt x 187.29642pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[9 </home/salvatore/Documenti/HRI/PepperProject/PepperWaiter_report/img/waiting_human.png (PNG copy)> </home/salvatore/Documenti/HRI/PepperProject/PepperWaiter_report/img/menu.png (PNG copy)>]
+[9 </home/salvatore/Documenti/HRI/PepperProject/report/img/waiting_human.png (PNG copy)> </home/salvatore/Documenti/HRI/PepperProject/report/img/menu.png (PNG copy)>]
 <img/order.png, id=126, 860.46469pt x 450.18187pt>
 File: img/order.png Graphic file (type png)
 <use img/order.png>
-Package pdftex.def Info: img/order.png  used on input line 177.
+Package pdftex.def Info: img/order.png  used on input line 178.
 (pdftex.def)             Requested size: 215.0023pt x 112.48337pt.
 <img/order_quantity.png, id=127, 511.9125pt x 472.01344pt>
 File: img/order_quantity.png Graphic file (type png)
 <use img/order_quantity.png>
-Package pdftex.def Info: img/order_quantity.png  used on input line 183.
+Package pdftex.def Info: img/order_quantity.png  used on input line 184.
 (pdftex.def)             Requested size: 129.00269pt x 118.94656pt.
- [10 </home/salvatore/Documenti/HRI/PepperProject/PepperWaiter_report/img/pizza.png (PNG copy)> </home/salvatore/Documenti/HRI/PepperProject/PepperWaiter_report/img/order.png (PNG copy)> </home/salvatore/Documenti/HRI/PepperProject/PepperWaiter_report/img/order_quantity.png (PNG copy)>]
+ [10 </home/salvatore/Documenti/HRI/PepperProject/report/img/pizza.png (PNG copy)> </home/salvatore/Documenti/HRI/PepperProject/report/img/order.png (PNG copy)> </home/salvatore/Documenti/HRI/PepperProject/report/img/order_quantity.png (PNG copy)>]
 <img/review_order.png, id=134, 511.9125pt x 484.81125pt>
 File: img/review_order.png Graphic file (type png)
 <use img/review_order.png>
-Package pdftex.def Info: img/review_order.png  used on input line 199.
+Package pdftex.def Info: img/review_order.png  used on input line 200.
 (pdftex.def)             Requested size: 161.25172pt x 152.71634pt.
 <img/confirmation_order.png, id=135, 676.77844pt x 447.92343pt>
 File: img/confirmation_order.png Graphic file (type png)
 <use img/confirmation_order.png>
-Package pdftex.def Info: img/confirmation_order.png  used on input line 205.
+Package pdftex.def Info: img/confirmation_order.png  used on input line 206.
 (pdftex.def)             Requested size: 215.0023pt x 142.29953pt.
 <img/checkout.png, id=137, 377.91188pt x 359.09157pt>
 File: img/checkout.png Graphic file (type png)
 <use img/checkout.png>
-Package pdftex.def Info: img/checkout.png  used on input line 218.
+Package pdftex.def Info: img/checkout.png  used on input line 219.
 (pdftex.def)             Requested size: 129.00269pt x 122.57716pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 214--222
+Underfull \hbox (badness 10000) in paragraph at lines 215--223
 
  []
 
 <img/qr_code.png, id=139, 823.075pt x 580.1675pt>
 File: img/qr_code.png Graphic file (type png)
 <use img/qr_code.png>
-Package pdftex.def Info: img/qr_code.png  used on input line 229.
+Package pdftex.def Info: img/qr_code.png  used on input line 230.
 (pdftex.def)             Requested size: 246.9244pt x 174.05157pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[11 </home/salvatore/Documenti/HRI/PepperProject/PepperWaiter_report/img/review_order.png (PNG copy)> </home/salvatore/Documenti/HRI/PepperProject/PepperWaiter_report/img/confirmation_order.png (PNG copy)> </home/salvatore/Documenti/HRI/PepperProject/PepperWaiter_report/img/checkout.png (PNG copy)>]
+[11 </home/salvatore/Documenti/HRI/PepperProject/report/img/review_order.png (PNG copy)> </home/salvatore/Documenti/HRI/PepperProject/report/img/confirmation_order.png (PNG copy)> </home/salvatore/Documenti/HRI/PepperProject/report/img/checkout.png (PNG copy)>]
 <img/likeability.png, id=147, 517.935pt x 436.63126pt>
 File: img/likeability.png Graphic file (type png)
 <use img/likeability.png>
-Package pdftex.def Info: img/likeability.png  used on input line 258.
+Package pdftex.def Info: img/likeability.png  used on input line 259.
 (pdftex.def)             Requested size: 182.75327pt x 154.06244pt.
 <img/intelligence.png, id=148, 385.44pt x 425.33907pt>
 File: img/intelligence.png Graphic file (type png)
 <use img/intelligence.png>
-Package pdftex.def Info: img/intelligence.png  used on input line 264.
+Package pdftex.def Info: img/intelligence.png  used on input line 265.
 (pdftex.def)             Requested size: 129.00269pt x 142.35478pt.
- [12 </home/salvatore/Documenti/HRI/PepperProject/PepperWaiter_report/img/qr_code.png> </home/salvatore/Documenti/HRI/PepperProject/PepperWaiter_report/img/likeability.png (PNG copy)> </home/salvatore/Documenti/HRI/PepperProject/PepperWaiter_report/img/intelligence.png (PNG copy)>] [13]
-Overfull \hbox (5.1981pt too wide) in paragraph at lines 290--290
+ [12 </home/salvatore/Documenti/HRI/PepperProject/report/img/qr_code.png> </home/salvatore/Documenti/HRI/PepperProject/report/img/likeability.png (PNG copy)> </home/salvatore/Documenti/HRI/PepperProject/report/img/intelligence.png (PNG copy)>] [13]
+Overfull \hbox (5.1981pt too wide) in paragraph at lines 291--291
 \OT1/cmtt/m/n/12 Toward -[] Anthropomimetic -[] Robotics % 3A -[] Development % 2C -[] and -[] a -[] Wittmeier -[]
  []
 
 
-Overfull \hbox (0.72043pt too wide) in paragraph at lines 290--290
+Overfull \hbox (0.72043pt too wide) in paragraph at lines 291--291
 \OT1/cmr/m/it/12 Jour-nal of Human-Computer Stud-ies \OT1/cmr/m/n/12 59.1 (2003). Ap-pli-ca-tions of Af-fec-tive Com-
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 291.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 292.
 [14]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 291.
- (/home/salvatore/Documenti/HRI/PepperProject/PepperWaiter_report/report21.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 291.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 291.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 292.
+ (/home/salvatore/Documenti/HRI/PepperProject/report/report21.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 292.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 292.
 Package rerunfilecheck Info: File `report21.out' has not changed.
 (rerunfilecheck)             Checksum: 7C23909BDDF4DD95BC36B6CB8AF85286;483.
 Package logreq Info: Writing requests to 'report21.run.xml'.
@@ -728,14 +732,14 @@ Package logreq Info: Writing requests to 'report21.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  14339 strings out of 483183
- 253530 string characters out of 5966291
+ 253309 string characters out of 5966291
  710094 words of memory out of 5000000
  29131 multiletter control sequences out of 15000+600000
  538960 words of font info for 46 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 48i,7n,46p,968b,1276s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,7n,46p,955b,1276s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/salvatore/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on /home/salvatore/Documenti/HRI/PepperProject/PepperWaiter_report/report21.pdf (14 pages, 3133229 bytes).
+Output written on /home/salvatore/Documenti/HRI/PepperProject/report/report21.pdf (14 pages, 3133356 bytes).
 PDF statistics:
  228 PDF objects out of 1000 (max. 8388607)
  183 compressed objects within 2 object streams
