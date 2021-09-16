@@ -214,7 +214,7 @@ def task():
 							order_table += '<td>'+str(food.quantity)+'</td>'
 							order_table += '<td>$ '+str(int(food.quantity)*int(food.price))+'</td>'
 							order_table += '</tr>'
-					order_table += "<tr> <td colspan='3'>Total: $"+str(total)+"</td> </tr>"
+					order_table += "<tr> <td colspan='2'>Total: </td> <td>$"+str(total)+"</td></tr>"
 					order_table += '</tbody> </table>'
 
 					im.executeModality('TEXT',order_table)

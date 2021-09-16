@@ -1,0 +1,251 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{none/global//global/global}
+  \entry{10.3115/976909.979652}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=WMA}{%
+         family={Walker},
+         familyi={W\bibinitperiod},
+         given={Marilyn\bibnamedelima A.},
+         giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=LDJ}{%
+         family={Litman},
+         familyi={L\bibinitperiod},
+         given={Diane\bibnamedelima J.},
+         giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=KCA}{%
+         family={Kamm},
+         familyi={K\bibinitperiod},
+         given={Candace\bibnamedelima A.},
+         giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=AA}{%
+         family={Abella},
+         familyi={A\bibinitperiod},
+         given={Alicia},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Association for Computational Linguistics}%
+    }
+    \strng{namehash}{WMA+1}
+    \strng{fullhash}{WMALDJKCAAA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    This paper presents PARADISE (PARAdigm for DIalogue System Evaluation), a
+  general framework for evaluating spoken dialogue agents. The framework
+  decouples task requirements from an agent's dialogue behaviors, supports
+  comparisons among dialogue strategies, enables the calculation of performance
+  over subdialogues and whole dialogues, specifies the relative contribution of
+  various factors to performance, and makes it possible to compare agents
+  performing different tasks by normalizing for task complexity.%
+    }
+    \field{booktitle}{Proceedings of the 35th Annual Meeting of the Association
+  for Computational Linguistics and Eighth Conference of the European Chapter
+  of the Association for Computational Linguistics}
+    \verb{doi}
+    \verb 10.3115/976909.979652
+    \endverb
+    \field{pages}{271–280}
+    \field{series}{ACL '98/EACL '98}
+    \field{title}{PARADISE: A Framework for Evaluating Spoken Dialogue Agents}
+    \verb{url}
+    \verb https://doi.org/10.3115/976909.979652
+    \endverb
+    \list{location}{1}{%
+      {Madrid, Spain}%
+    }
+    \field{year}{1997}
+    \warn{\item Can't use 'location' + 'address'}
+  \endentry
+
+  \entry{Wittmeier2013TowardAR}{article}{}
+    \name{author}{17}{}{%
+      {{hash=WS}{%
+         family={Wittmeier},
+         familyi={W\bibinitperiod},
+         given={Steffen},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=AC}{%
+         family={Alessandro},
+         familyi={A\bibinitperiod},
+         given={C.},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=BN}{%
+         family={Bascarevic},
+         familyi={B\bibinitperiod},
+         given={N.},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=DK}{%
+         family={Dalamagkidis},
+         familyi={D\bibinitperiod},
+         given={K.},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=DD}{%
+         family={Devereux},
+         familyi={D\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=DA}{%
+         family={Diamond},
+         familyi={D\bibinitperiod},
+         given={A.},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=JM}{%
+         family={J{\"a}ntsch},
+         familyi={J\bibinitperiod},
+         given={Michael},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=JK}{%
+         family={Jovanovi{\'c}},
+         familyi={J\bibinitperiod},
+         given={K.},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=KR}{%
+         family={Knight},
+         familyi={K\bibinitperiod},
+         given={Rob},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=MHG}{%
+         family={Marques},
+         familyi={M\bibinitperiod},
+         given={H.\bibnamedelima G.},
+         giveni={H\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=MP}{%
+         family={Milosavljevic},
+         familyi={M\bibinitperiod},
+         given={P.},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=MBK}{%
+         family={Mitra},
+         familyi={M\bibinitperiod},
+         given={Bhargav\bibnamedelima K.},
+         giveni={B\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=SB}{%
+         family={Svetozarevic},
+         familyi={S\bibinitperiod},
+         given={B.},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=PV}{%
+         family={Potkonjak},
+         familyi={P\bibinitperiod},
+         given={V.},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=PR}{%
+         family={Pfeifer},
+         familyi={P\bibinitperiod},
+         given={R.},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=KA}{%
+         family={Knoll},
+         familyi={K\bibinitperiod},
+         given={A.},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=HO}{%
+         family={Holland},
+         familyi={H\bibinitperiod},
+         given={O.},
+         giveni={O\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WS+1}
+    \strng{fullhash}{WSACBNDKDDDAJMJKKRMHGMPMBKSBPVPRKAHO1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{171\bibrangedash 193}
+    \field{title}{Toward Anthropomimetic Robotics: Development, Simulation, and
+  Control of a Musculoskeletal Torso}
+    \verb{url}
+    \verb https://www.semanticscholar.org/paper/Toward-Anthropomimetic-Robotics
+    \verb %3A-Development%2C-and-a-Wittmeier-Alessandro/1ae4f8a739efbaf8609ab08
+    \verb f2c3e2606892a7899?p2df
+    \endverb
+    \field{volume}{19}
+    \field{journaltitle}{Artificial Life}
+    \field{year}{2013}
+  \endentry
+
+  \entry{BREAZEAL2003119}{article}{}
+    \name{author}{1}{}{%
+      {{hash=BC}{%
+         family={Breazeal},
+         familyi={B\bibinitperiod},
+         given={Cynthia},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \keyw{Human–robot interaction, Emotion, Expression, Sociable humanoid
+  robots}
+    \strng{namehash}{BC1}
+    \strng{fullhash}{BC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    This paper focuses on the role of emotion and expressive behavior in
+  regulating social interaction between humans and expressive anthropomorphic
+  robots, either in communicative or teaching scenarios. We present the
+  scientific basis underlying our humanoid robot's emotion models and
+  expressive behavior, and then show how these scientific viewpoints have been
+  adapted to the current implementation. Our robot is also able to recognize
+  affective intent through tone of voice, the implementation of which is
+  inspired by the scientific findings of the developmental psycholinguistics
+  community. We first evaluate the robot's expressive displays in isolation.
+  Next, we evaluate the robot's overall emotive behavior (i.e. the coordination
+  of the affective recognition system, the emotion and motivation systems, and
+  the expression system) as it socially engages nave human subjects
+  face-to-face.%
+    }
+    \verb{doi}
+    \verb https://doi.org/10.1016/S1071-5819(03)00018-1
+    \endverb
+    \field{issn}{1071-5819}
+    \field{note}{Applications of Affective Computing in Human-Computer
+  Interaction}
+    \field{number}{1}
+    \field{pages}{119\bibrangedash 155}
+    \field{title}{Emotion and sociable humanoid robots}
+    \verb{url}
+    \verb https://www.sciencedirect.com/science/article/pii/S1071581903000181
+    \endverb
+    \field{volume}{59}
+    \field{journaltitle}{International Journal of Human-Computer Studies}
+    \field{year}{2003}
+  \endentry
+\enddatalist
+\endinput
