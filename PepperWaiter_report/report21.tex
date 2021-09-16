@@ -6,6 +6,8 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{subcaption}
+\usepackage{wrapfig}
+\usepackage[inline]{enumitem}
 
 \title{Pepper Waiter HRI Project}
 \author{Daniele Appetito 1916560\\
@@ -58,6 +60,7 @@ Because the aforementioned Softbank Robotics robot does not have any moving faci
 After a final research and consideration we decided that creating a robot waiter would be the best way to portray all of our ideas into a single project.
 In the problem we analysed earlier we concluded that we wanted a way to allow safe interactions in restaurants/bars that adhered to the social distancing norms imposed due to the current global pandemic. To solve this problem we decided to create a robot waiter that would help serve people in a restaurant. This solves the problem partially as it gets rid of a whole interaction step in the business by replacing it with a machine incapable of contracting diseases (given that it is kept clean and sanitised often). 
 
+\newpage
 \section{Implementation}
 Different tools and API are used in order to create human interactions with a Pepper real robot or simulator, like:
 
@@ -70,9 +73,9 @@ Different tools and API are used in order to create human interactions with a Pe
 All of the tools are described in the following paragraphs.\\
 
 \subsection{Softbank SDK simulator}
-The Softbank company, which produces Pepper robots, has made avaible an SDK which allows to connect to a real robot or to create a simulation of the robot using Android Studioa application (\href{https://qisdk.softbankrobotics.com/sdk/doc/pepper-sdk/index.html}{Softbank SDK}). Because of Covid constraints, it was not possible to use directly the Pepper robot, placed in the laboratories of DIAG-University of La Sapienza: for this reason the simulatotion mode is was used.\\
+The Softbank company, which produces Pepper robots, has made avaible an SDK which allows to connect to a real robot or to create a simulation of the robot using Android Studio application (\href{https://qisdk.softbankrobotics.com/sdk/doc/pepper-sdk/index.html}{Softbank SDK}). Because of Covid constraints, it was not possible to use directly the Pepper robot, placed in the laboratories of DIAG-University of La Sapienza: for this reason the simulatotion mode is was used.\\
 
-This simulator gives the opportunity of visualize the movements, the dialogs and the interactions that the robot has with people.
+This simulator gives the opportunity of visualize the movements, the dialogs and the interactions that the robot has with people, as can be seen in figure [\ref{fig:android_sdk}]
 
 \begin{figure}[htbp]
 	\centerline{\includegraphics[scale=.3]{img/pepperSDK.png}}
@@ -103,10 +106,10 @@ Like described before, the app running on Pepper's tablet can be virtualized thr
 \begin{figure}[htbp]
 	\centerline{\includegraphics[scale=.6]{img/modim.png}}
 	\caption{ Multi-modal Interaction Manager software architecture.}
-	\label{fig}
+	\label{fig:modim_architecture}
 \end{figure}
 
-The Multi-modalInteraction Manager (MODIM), the Graphical User Interface (GUI) and the speech system allow the use of different modalities for the output and input of information from the robot to the user and viceversa. The output modalities considered are the use of texts, images or videos using the GUI or by voice using the speech synthesis. Input modalities are the touch-screen (i.e., with the use of buttons on the GUI) or spoken inputs interpreted by the speech recognizer.\\
+The Multi-modalInteraction Manager (MODIM), the Graphical User Interface (GUI) and the speech system allow the use of different modalities for the output and input of information from the robot to the user and viceversa. The output modalities considered are the use of texts, images or videos using the GUI or by voice using the speech synthesis. Input modalities are the touch-screen (i.e., with the use of buttons on the GUI) or spoken inputs interpreted by the speech recognizer. The general architecture of this Manager is shown in figure [\ref{fig:modim_architecture}]\\
 
 Therefore, after connecting the Interaction Manager with Pepper, thanks to this library the app on the tablet can be simulated on a web browser; the user can interact with this one with buttons present on the GUI, both clicking on them through the web browser and giving spoken input (e.g. simulating them thanks to the \verb|naoqi| software).
 
@@ -116,46 +119,161 @@ Therefore, after connecting the Interaction Manager with Pepper, thanks to this 
 	  \centering
 	  \includegraphics[width=1\linewidth]{img/modim_notok.png}
 	  \caption{Modim not connected to Pepper.}
-	  \label{fig:sub1}
+	  \label{fig:conn_notok}
 	\end{subfigure}%
 	\begin{subfigure}{.5\textwidth}
 	  \centering
 	  \includegraphics[width=1\linewidth]{img/modim_ok.png}
 	  \caption{Modim connected to Pepper.}
-	  \label{fig:sub2}
+	  \label{fig:conn_ok}
 	\end{subfigure}
 	\caption{Connection of MODIM to the robot}
-	\label{fig:test}
+	\label{fig:modim_connection}
+\end{figure}
+
+\newpage
+\section{Results}
+Pepper Waiter works as a virtual (or physical, although we could only test it virtually) waiter that is designed to welcome customers to a restaurant, show the menu and take their order, as well as assist them in paying the bill and finally take a satisfactory questonnaire. \\
+
+Initially the robot is waiting to interact with a person in front of him. When a person approaches Pepper, its sonar front sensors will detect the person and greet the customer with a welcome message both on its front tablet, and by voice. From there a customer can choose from a 4 options: "Menu", "Order", "Checkout", and "Review". All of these options being self explanatory and selecting each word will take the customer to a separate screen for the according action.  \\
+
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+	  \centering
+	  \includegraphics[width=1\linewidth]{img/waiting_human.png}
+	  \caption{Pepper is waiting for a person.}
+	  \label{fig:wait_human}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+	  \centering
+	  \includegraphics[width=.9\linewidth]{img/menu.png}
+	  \caption{Pepper detect a person in front of him.}
+	  \label{fig:human_arrived}
+	\end{subfigure}
+	\caption{Approach of a human to Pepper Waiter}
+	\label{fig:approach_person}
+\end{figure}
+
+The "Menu" screen consists of an individual page for each item of the menu where one can read the description, the ingredients, and the price as we can see from figure [\ref{fig:menu}]. Pepper will also read the description out loud. The dishes present in the menu can be changed, addded or removed easily using a csv file, which for each dish contains a tuple of $(food\ name, path\ to\ image, price, description)$. This csv file is then imported inside the python script and a list of \verb|Food| objects is dinamically created.\\
+
+\begin{figure}[h]
+	\centerline{\includegraphics[scale=.4]{img/pizza.png}}
+	\caption{Example of the menu showing a photo, name, description and price of the dish.}
+	\label{fig:menu}
 \end{figure}
 
 \newpage
 
-\section{Results}
-
-Pepper Waiter works as a virtual (or physical, although we could only test it virtually) waiter that is designed to welcome customers to a restaurant and take their order, as well as assist them in paying the bill.
-
-\
-
-When a person approaches Pepper, its front sensors will detect an object and greet the customer with a welcome message both on its front tablet, and by voice. From there a customer can choose from a 4 options: "Menu", "Order", "Checkout", and "Review". All of these options being self explanatory and selecting each word will take the customer to a separate screen for the according action. 
+After having decided on what to order from the menu the customer can the return to the main page described in the previous paragraph to continue on with the order. \\
+In the "Order" screen one can choose any of the available dishes (in this example pizza, nachos, tiramisu) and drinks (water, red wine), as shown in figure [\ref{fig:order}]. After clicking on one of the aforementioned	buttons the customer can then choose the quantity of the food/beverage that they want, adding or removing an item of that dish, as can be seen in figure [\ref{fig:order_quantity}]. They can continue the order, going to the previous page, choosing another dish or review directly the order.
 
 \
 
-The "Menu" screen consists of an individual page for each item of the menu (5 in total) where one can read the description, the ingredients, and the price. Pepper will also read the description out loud. After having decided on what to order from the menu the customer can the return to the main page described in the previous paragraph to continue on with the order.
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+	  \centering
+	  \includegraphics[width=1\linewidth]{img/order.png}
+	  \caption{Ordination page.}
+	  \label{fig:order}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+	  \centering
+	  \includegraphics[width=.6\linewidth]{img/order_quantity.png}
+	  \caption{Choose the quantity.}
+	  \label{fig:order_quantity}
+	\end{subfigure}
+	\caption{Ordination of a dish.}
+	\label{fig:ordination}
+\end{figure}
+
+Once they are fully ready they can click on "Review Order" to review what they have ordered, in a table format shown in figure [\ref{fig:review_order}]. From there the customer will have the possibility of altering the order one or confirming it. Once confirmed, the customer will receive an order number that will be then used to recognise the order at checkout. After this the robot will automatically go back to the main menu page, in order to prepare to serve someone else.
 
 \
 
-In the "Order" screen one can choose any of the 3 available dishes (pizza, nachos, tiramisu) and 2 drinks (water, red wine). After clicking on one of the 5 aforementioned	buttons the customer can then choose the quantity of the food/beverage that they want. Once they are fully ready they can click on "Review Order" to review what they have ordered. From there the customer will have the possibility of altering the order one or confirming it. Once confirmed, the customer will receive an order number that will be then used to recognise the order at checkout. After this the robot will automatically go back to the main menu page, in order to prepare to serve someone else.
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+	  \centering
+	  \includegraphics[width=.75\linewidth]{img/review_order.png}
+	  \caption{Review of the ordination.}
+	  \label{fig:review_order}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+	  \centering
+	  \includegraphics[width=1\linewidth]{img/confirmation_order.png}
+	  \caption{Number used for checkout.}
+	  \label{fig:confirmation_order}
+	\end{subfigure}
+	\caption{Confirmation of the order.}
+	\label{fig:review_confirmation}
+\end{figure}
+
+
+Once the customer is finished with the food they can then walk over to Pepper again and (after being greeted again) can press the "Checkout" button, where a list of ids are shown. After clicking the previously assigned id, a lists of the ordered items and the total price will be displayed, as can be seen in figure [\ref{fig:checkout}].\\
+\begin{wrapfigure}{r}{0.3\textwidth}
+	\vspace{-40pt}
+	\begin{center}
+	  \includegraphics[width=0.3\textwidth]{img/checkout.png}
+	\end{center}
+	\caption{Checkout}
+	\label{fig:checkout}
+\end{wrapfigure}
+In this page one will be able to review their order after stating the order number assigned to them earlier. \\
+After this a "fake" payment procedure, with a qr code, is then done (see figure [\ref{fig:qr_code}]). This procedure will automatically prompt a succesfull payment landing page, but can be substituted with a real one, using the preferred API for payment. Once the payment is confirmed the customer can choose to leave the restaurant or leave a review of the service where they'll have to rate their experience with Pepper on a scale of 1 to 5. 
 
 \
 
-Once the customer is finished with the food they can then walk over to pepper again and (after being greeted again) can press the "Checkout" button, where a list of the ordered items and the total price will be displayed. In this page one will be able to review their order after stating the order number assigned to them earlier. Once the payment is confirmed the customer can choose to leave a review of the service where they'll have to rate their experience with Pepper on a scale of 1 to 5. 
+\begin{figure}[h]
+	\centerline{\includegraphics[scale=.3]{img/qr_code.png}}
+	\caption{Example of payment via qr code.}
+	\label{fig:qr_code}
+\end{figure}
 
 
+The questionnaire is subdivided into two categories: $i)$ intelligence perceived and $ii)$ likelability.\\
+In the first case the human can give a score on the following characteristics:
+\begin{enumerate*}
+	\item Knowledgeable;
+	\item Responsible;
+	\item Intelligent;
+	\item Sensible.
+\end{enumerate*}
+\\
+While in the second case the characteristics in question are:
+\begin{enumerate*}
+	\item Friendly;
+	\item Kind;
+	\item Pleasant;
+	\item Nice.
+\end{enumerate*}
+\\
+All the reviews are then locally stored logging into modim thanks to \verb|im.logdata()| and can be later used to improve the behaviour of Pepper Waiter.
+
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+	  \centering
+	  \includegraphics[width=.85\linewidth]{img/likeability.png}
+	  \caption{Review of likeability.}
+	  \label{fig:likeability}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+	  \centering
+	  \includegraphics[width=.6\linewidth]{img/intelligence.png}
+	  \caption{Review of intelligence.}
+	  \label{fig:intelligence}
+	\end{subfigure}
+	\caption{Questionnaire}
+	\label{fig:questionnaire}
+\end{figure}
 
 
+\newpage
 \section{Conclusion}
 
-We created a program for the Pepper robot designed to interact with humans in a customer-waiter way. The project itself was fun and challenging. One of our greater challenges was docker setup as well as the simulation start on android studio. However, after the initial hickups on starting to use the program, the process was streamlined and entertaining. We learned a lot about android application creations, as well as what Pepper is capable of doing. 
+We created a program for the Pepper robot designed to interact with humans in a customer-waiter way. The project itself was fun and challenging. One of our greater challenges was the setup of all the interconnecting API and libraries as well as the simulation start on android studio. However, after the initial hickups on starting to use the program, the process was streamlined and entertaining. We learned a lot about human-robot interaction application creations, as well as what Pepper is capable of doing. 
 
 \
 
