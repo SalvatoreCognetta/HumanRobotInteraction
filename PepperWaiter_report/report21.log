@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2021.9.13)  15 SEP 2021 22:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2021.9.13)  16 SEP 2021 12:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -954,9 +954,9 @@ Here is how much of TeX's memory you used:
  16902 multiletter control sequences out of 15000+600000
  9925 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,7n,45p,988b,1209s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,7n,45p,989b,1209s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on "/home/daniele/Documents/Human Robot Interaction/PepperProject/PepperWaiter_report/report21.pdf" (10 pages, 1073982 bytes).
+Output written on "/home/daniele/Documents/Human Robot Interaction/PepperProject/PepperWaiter_report/report21.pdf" (10 pages, 1073964 bytes).
 PDF statistics:
  166 PDF objects out of 1000 (max. 8388607)
  138 compressed objects within 2 object streams
