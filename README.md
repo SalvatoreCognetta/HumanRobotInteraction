@@ -1,5 +1,7 @@
-# HRI-Pepper Movies
-Project for HRI course.
+# HRI-Pepper Waiter
+Project for HRI course.  
+Look at [video preview](./demo_final.mp4) for a demo of the software.  
+Refer to the [report](./report/report21.pdf) for a description of the project.
 
 # How to run the application
 ## Run the docker image
